@@ -7,11 +7,23 @@
     margin-right: 25px;
 }
 body {
-    background-image: url("../img/palau-land.jpg");
-    background-size: cover;
-    /* background-position: 50% 30%;
-    background-repeat: no-repeat;  */
+    background-image: url("../img/palau-background/palau-land.jpg");
+    background-repeat: no-repeat;
 }
 #about {
     text-align: center;
+}
+.current-listings-title {
+    text-align: center;
+    background-color: lightblue;
+    margin: 0;
+}
+#listings {
+    background-color: beige;
+}
+#buy-footer {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
 }
