@@ -1,35 +1,35 @@
 .main-navbar {
-    display: block;
+  display: block;
 }
 
 #favicon {
-    width: 50px;
-    height: 50px;
-    margin-right: 25px;
+  width: 50px;
+  height: 50px;
+  margin-right: 25px;
 }
 
 body {
-    background-image: url("../img/palau-background/palau-land.jpg");
-    background-repeat: no-repeat;
+  background-image: url("../img/palau-background/palau-land.jpg");
+  background-repeat: no-repeat;
 }
 
 #about {
-    text-align: center;
+  text-align: center;
 }
 
 .current-listings-title {
-    text-align: center;
-    background-color: lightblue;
-    margin: 0;
+  text-align: center;
+  background-color: lightblue;
+  margin: 0;
 }
 
 #listings {
-    background-color: beige;
+  background-color: beige;
 }
 
 #buy-footer {
-    background-color: grey;
-    color: white;
-    text-align: center;
-    margin-top: 10px;
+  background-color: grey;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
 }
