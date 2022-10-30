@@ -36,12 +36,41 @@
               <a class="nav-link" href="#">Sell</a>
             </li>
             <li id="user-login" class="nav-item" aria-current="login">
-              <a class="nav-link" href="#">Login</a>
+              <a class="nav-link active" role='button' href="#">Login</a>
             </li>
           </ul>
           </div>
         </div>
     </nav>
   </header>
+  <main class="search">
+  </main>
+  <section class="login">
+
+    <div id="index-login-container" class="modal">
+  
+      <form class="login-content animate" action="/action_page.php" method="post">
+    
+        <div class="index-form-content">
+          <label for="username"><b>Username</b></label>
+          <input id='index-username' type="text" placeholder="Enter Username" name="username" required>
+    
+          <label for="password"><b>Password</b></label>
+          <input id='index-password' type="password" placeholder="Enter Password" name="password" required>
+            
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+    
+        <div class="index-form-content" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('index-login-container').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="forgot">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+  </section>
+  <script src="../js/index.js"></script>
 </body>
 </html>
