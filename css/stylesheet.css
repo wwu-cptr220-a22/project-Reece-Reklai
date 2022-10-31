@@ -1,37 +1,51 @@
+/* Navbar in home page */
 .main-navbar {
   display: block;
 }
-
+/* Favicon */
 #favicon {
   width: 50px;
   height: 50px;
   margin-right: 25px;
 }
 
+/* Body image for all webpages */
 body {
   background-image: url("../img/palau-background/palau-land.jpg");
   background-repeat: no-repeat;
+  background-size: cover
 }
 
+@media screen and (max-width: 992px) {
+  body {
+    background-image: url("../img/palau-background/palau-land.jpg");
+    background-repeat: no-repeat;
+    background-size: cover
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    background-image: url("../img/palau-background/cloudy.jpg");
+    background-repeat: no-repeat;
+  }
+}
+
+/* Center text in about webpage */
 #about {
   text-align: center;
 }
 
+/* Listing arrangment */
 .current-listings-title {
   text-align: center;
-  background-color: lightblue;
   margin: 0;
 }
 
-#listings {
-  background-color: beige;
-}
-
+/* The bottom of the buy webpage*/
 #buy-footer {
-  background-color: grey;
-  color: white;
+  color: black;
   text-align: center;
-  margin-top: 10px;
 }
 
 /* Full-width input fields */
