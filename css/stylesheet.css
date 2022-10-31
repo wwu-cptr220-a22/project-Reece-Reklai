@@ -95,8 +95,9 @@ button:hover {
   padding: 16px;
 }
 
-/* The forgot text on the form conatiner located in the index (home webpage) */
-span.forgot {
+/* The recovery text on the form conatiner located in the index (home webpage) */
+span.recovery {
+  white-space: normal;
   float: right;
   padding-top: 16px;
 }
@@ -105,22 +106,18 @@ span.forgot {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
 /* Login Content Box Container */
 .login-content {
   background-color: #fefefe;
   margin: 5% auto 15% auto; 
-  border: 1px solid #888;
   width: 80%; 
 }
 
@@ -157,11 +154,11 @@ span.forgot {
 }
 
 /* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.forgot {
-     display: block;
-     float: none;
-  }
+@media screen and (max-width: 400px) {
+  span.recovery {
+    display: block;
+    float: none;
+ }
   .cancelbtn {
      width: 100%;
   }
