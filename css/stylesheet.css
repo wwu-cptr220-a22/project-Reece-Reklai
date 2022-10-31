@@ -53,7 +53,7 @@ body {
 
 /* The bottom of the buy webpage*/
 #buy-footer {
-  color: black;
+  color: whitesmoke;
   text-align: center;
 }
 
@@ -162,4 +162,25 @@ span.recovery {
   .cancelbtn {
      width: 100%;
   }
+}
+
+/* about webpage */
+.palau-overview {
+  background-color: rgba(0,0,0,0.4);
+}
+
+.palau-problem {
+  color: whitesmoke;
+}
+
+.project-purpose {
+  color: whitesmoke;
+}
+
+.about-question-and-help, .about-name, .about-email, .about-message {
+  color: whitesmoke;
+}
+
+.about-email {
+  width: 44px;
 }
