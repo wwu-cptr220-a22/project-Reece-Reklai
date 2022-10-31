@@ -29,6 +29,13 @@ body {
     background-image: url("../img/palau-background/cloudy.jpg");
     background-repeat: no-repeat;
   }
+  /* Listing arrangment */
+  .current-listings-title {
+    text-align: center;
+    margin: 0;
+    color: lightgrey;
+  }
+
 }
 
 /* Center text in about webpage */
