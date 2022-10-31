@@ -155,7 +155,7 @@ span.recovery {
 /* about webpage */
 .palau-overview {
   background-color: rgba(0,0,0,0.4);
-  margin-top: 27px;
+  margin-top: 30px;
 }
 .palau-problem {
   color: whitesmoke;
@@ -165,7 +165,7 @@ span.recovery {
   color: whitesmoke;
 }
 
-.about-question-and-help, .about-name, .about-email, .about-message {
+.about-form-title, .about-name, .about-email, .about-message {
   color: whitesmoke;
 }
 
