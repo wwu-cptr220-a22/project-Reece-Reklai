@@ -23,26 +23,55 @@ body {
   background-size: auto;
 }
 
-@media screen and (max-width: 992px) {
-  #buy {
-    background-image: url("../img/palau-background/palau-land.jpg");
-    background-repeat: no-repeat;
-    background-size: cover
-  }
+#buy {
+  background-image: url("../img/palau-background/rock-island.jpg");
+  background-repeat: no-repeat;
+  background-size: cover
 }
 
-@media screen and (max-width: 767px) {
-  #buy {
-    background-image: url("../img/palau-background/cloudy.jpg");
-    background-repeat: no-repeat;
-    background-size: cover
-  }
+/* Create a right-aligned (split) link inside the navigation bar */
+.topnav .split {
+  float: right;
+  background-color: lightblue;
+  color: black;
+  display: block;
 }
 
 /* The bottom of the buy webpage*/
 #buy-footer {
-  color: whitesmoke;
+  color: white;
   text-align: center;
+  background-color: rgba(0,0,0,0.5);
+  margin-top: 5px;
+}
+
+/* Listing title in buy webpage */
+.listings-buy-title {
+  display: inline-block;
+  position: relative;
+  left: 45%;
+  color: whitesmoke;
+}
+
+/* Responsive buy webpage */
+@media screen and (max-width: 992px) {
+  #buy {
+    background-image: url("../img/palau-background/ocean.jpg");
+    background-repeat: no-repeat;
+    background-size: cover
+  }
+}
+
+@media screen and (max-width: 447px) {
+  .topnav .split {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 295px) {
+  .listings-buy-title {
+    left: 0%;
+  }
 }
 
 /* Full-width input fields */
@@ -195,13 +224,6 @@ span.recovery {
   color: black;
 }
 
-/* Create a right-aligned (split) link inside the navigation bar */
-.topnav a.split {
-  float: right;
-  background-color: #04AA6D;
-  color: white;
-}
-
 /* Nav bar hover highlights the links */
 #buy-link a:hover {
   background-color: #ddd;
@@ -227,3 +249,4 @@ span.recovery {
   background-color: #ddd;
   color: black;
 }
+
