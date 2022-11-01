@@ -41,7 +41,7 @@ body {
 #buy-footer {
   color: white;
   text-align: center;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 50%);
   margin-top: 5px;
 }
 
@@ -112,7 +112,7 @@ button:hover {
   padding: 16px;
 }
 
-/* The recovery text on the form conatiner located in the index (home webpage) */
+/* The recovery text on the form container located in the index (home webpage) */
 span.recovery {
   white-space: normal;
   float: right;
@@ -126,16 +126,16 @@ span.recovery {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 70%); /* Black w/ opacity */
   padding-top: 100px;
 }
 
 /* Login Content Box Container */
 .login-content {
   background-color: #fefefe;
-  margin: 5% auto 15% auto; 
-  width: 80%; 
+  margin: 5% auto 15%;
+  width: 80%;
 }
 
 /* The Close Button (x) */
@@ -161,13 +161,13 @@ span.recovery {
 }
 
 @-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
+  from { -webkit-transform: scale(0) };
+  to { -webkit-transform: scale(1) }
 }
   
 @keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
+  from { transform: scale(0) }; 
+  to { transform: scale(1) }
 }
 
 /* Change styles for span and cancel button on extra small screens */
@@ -175,17 +175,19 @@ span.recovery {
   span.recovery {
     display: block;
     float: none;
- }
+  }
+
   .cancelbtn {
-     width: 100%;
+    width: 100%;
   }
 }
 
 /* about webpage */
 .palau-overview {
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 40%);
   margin-top: 30px;
 }
+
 .palau-problem {
   color: whitesmoke;
 }
@@ -194,7 +196,10 @@ span.recovery {
   color: whitesmoke;
 }
 
-.about-form-title, .about-name, .about-email, .about-message {
+.about-form-title,
+ .about-name,
+  .about-email,
+   .about-message {
   color: whitesmoke;
 }
 
@@ -249,4 +254,3 @@ span.recovery {
   background-color: #ddd;
   color: black;
 }
-
