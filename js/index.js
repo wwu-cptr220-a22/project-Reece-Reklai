@@ -4,7 +4,7 @@ const login = document.getElementById('index-login-container')
 // When the user clicks anywhere outside of the login, close it
 window.onclick = function (event) {
   if (event.target === login) {
-      login.style.display = 'none'
+    login.style.display = 'none'
   }
 }
 
@@ -12,6 +12,6 @@ window.onclick = function (event) {
 const userLogin = document.getElementById('user-login')
 userLogin.addEventListener('click', function () {
   const button = document.getElementById('index-login-container')
-  button.style.display ='block'
-  button.style.width ='auto'
+  button.style.display = 'block'
+  button.style.width = 'auto'
 })

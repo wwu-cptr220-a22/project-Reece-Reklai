@@ -2,6 +2,7 @@
 .main-navbar {
   display: block;
 }
+
 /* Favicon */
 #favicon {
   width: 50px;
@@ -26,7 +27,7 @@ body {
 #buy {
   background-image: url("../img/palau-background/rock-island.jpg");
   background-repeat: no-repeat;
-  background-size: cover
+  background-size: cover;
 }
 
 /* Create a right-aligned (split) link inside the navigation bar */
@@ -86,8 +87,8 @@ body {
 
 /* Set a style for all buttons */
 button {
-  background-color: rgb(22, 22, 22);
-  color: white;
+  background-color: rgb(99, 96, 96);
+  color: rgb(255, 255, 255);
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -157,14 +158,14 @@ span.recovery {
 /* Add Zoom Animation */
 .animate {
   -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
+  animation: animatezoom 0.6s;
 }
 
 @-webkit-keyframes animatezoom {
   from { -webkit-transform: scale(0) };
   to { -webkit-transform: scale(1) }
 }
-  
+
 @keyframes animatezoom {
   from { transform: scale(0) }; 
   to { transform: scale(1) }
@@ -197,9 +198,9 @@ span.recovery {
 }
 
 .about-form-title,
- .about-name,
-  .about-email,
-   .about-message {
+.about-name,
+.about-email,
+.about-message {
   color: whitesmoke;
 }
 
