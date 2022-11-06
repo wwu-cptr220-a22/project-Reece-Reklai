@@ -1,0 +1,31 @@
+#body-container {
+  background-color: #0000004f;
+}
+
+.flex-main {
+  height: 100%;
+}
+
+.flex-about {
+  flex: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+input {
+  width: 70%;
+}
+
+#message-box,
+#submit-button {
+  width: 90%;
+}
+
+/* on 768px OR LARGER displays */
+@media (min-width: 768px) {
+
+  .flex-main {
+    flex-direction: row;
+  }
+}
+

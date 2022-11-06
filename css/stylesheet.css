@@ -19,7 +19,7 @@ body {
 }
 
 #about {
-  text-align: center;
+  text-align: left;
   background-image: url("../img/palau-background/road-trip.jpg");
   background-repeat: no-repeat;
   background-size: auto;
