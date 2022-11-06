@@ -29,6 +29,7 @@ body {
   background-image: url("../img/palau-background/rock-island.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 /* Create a right-aligned (split) link inside the navigation bar */
