@@ -54,7 +54,7 @@
 
 /* on 992px OR LARGER displays */
 @media (min-width: 992px) {
- .map {
+  .map {
     margin-left: 2rem;
   }
 }
