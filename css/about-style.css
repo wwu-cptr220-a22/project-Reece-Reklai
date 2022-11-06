@@ -23,7 +23,6 @@ input {
 
 /* on 768px OR LARGER displays */
 @media (min-width: 768px) {
-
   .flex-main {
     flex-direction: row;
   }
