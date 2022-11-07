@@ -63,3 +63,22 @@
     margin-left: 3rem;
   }
 }
+
+/* Return to Top Button */
+#topButton:hover {
+  background-color: black;
+}
+
+#topButton {
+  display: none;
+  width: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
