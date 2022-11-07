@@ -21,8 +21,8 @@ function initMap() {
   // The location of Palau
   const palau = { lat: 7.53644, lng: 134.58159 };
   let position // declared for each map based on hidden div for lat and lng
-  let latRX = /(?<=lat: )\d*\.\d*/
-  let lngRX = /(?<=lng: )\d*\.\d*/
+  let latRX = /(?<=lat: )[\d]*\.[\d]*/
+  let lngRX = /(?<=lng: )[\d]*\.[\d]*/
 
   // The map, centered at Palau
   const locations = document.querySelectorAll('.google-maps')
