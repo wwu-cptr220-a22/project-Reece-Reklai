@@ -15,11 +15,11 @@ body {
   background-image: url("../img/palau-background/palau-land.jpg");
   background-repeat: no-repeat;
   background-size: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0 0 0 / 50%);
 }
 
 #about {
-  text-align: center;
+  text-align: left;
   background-image: url("../img/palau-background/road-trip.jpg");
   background-repeat: no-repeat;
   background-size: auto;
@@ -29,6 +29,7 @@ body {
   background-image: url("../img/palau-background/rock-island.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 /* Create a right-aligned (split) link inside the navigation bar */
@@ -55,7 +56,7 @@ body {
 #buy-footer {
   color: white;
   text-align: center;
-  background-color: rgba(0 0 0 50%);
+  background-color: rgba(0 0 0 45%);
   margin-top: 5px;
 }
 
@@ -122,12 +123,12 @@ button:hover {
   background-color: #f44336;
 }
 
-/* Padding for the form container located in the index (home webpage) */
+/* Padding for the form container located in the index */
 .index-form-content {
   padding: 16px;
 }
 
-/* The recovery text on the form container located in the index (home webpage) */
+/* The recovery text on the form container located in the index */
 span.recovery {
   white-space: normal;
   float: right;
@@ -136,6 +137,13 @@ span.recovery {
 
 /* The Modal (background) */
 .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0 0 0); /* Fallback color */
+  background-color: rgba(0 0 0 / 70%); /* Black w/ opacity */
   display: none;
   /* Hidden by default */
   position: fixed;
@@ -213,31 +221,6 @@ span.recovery {
   }
 }
 
-/* about webpage */
-.palau-overview {
-  background-color: rgba(0 0 0 40%);
-  margin-top: 30px;
-}
-
-.palau-problem {
-  color: whitesmoke;
-}
-
-.project-purpose {
-  color: whitesmoke;
-}
-
-.about-form-title,
-.about-name,
-.about-email,
-.about-message {
-  color: whitesmoke;
-}
-
-.about-email {
-  width: 44px;
-}
-
 /* Style the links inside the navigation bar (Navbar for Buy webpage) */
 .topnav {
   background-color: #333;
@@ -290,4 +273,8 @@ span.recovery {
 #user-login a:hover {
   background-color: #ddd;
   color: black;
+}
+
+.hidden {
+  display: none;
 }

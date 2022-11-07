@@ -1,67 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/x-icon" href="../img/icons/favicon.ico">
-    <title>About</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../css/stylesheet.css" />
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/x-icon" href="../img/icons/favicon.ico">
+  <title>About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/stylesheet.css" />
+  <link rel="stylesheet" href="../css/flex-style.css" />
+  <link rel="stylesheet" href="../css/about-style.css" />
     
   <script src="../js/header.js" type="text/javascript" defer></script>
-  </head>
+</head>
 
-  <body id="about">
+<body id="about">
+  <div id="body-container">
     <my-header> </my-header>
-    <main class="palau-overview">
-      <div class="palau-problem" aria-label="Palau's Real Estate Problem">
-        <h1>Palau's Real Estate Problem</h1>
-        <p>
-          In Palau, many people own a plot of land. In most cases, it is
-          currently undeveloped. Furthermore, Palau has a unique law that
-          prevents foreigners from owning land. This means that Palauans can
-          only buy and sell land to one another. In order to include foreigners,
-          Palauans can lease their land for 99 years to them. To make matters
-          worse, there will be a huge population increase in a few years because
-          USA is in the process of establishing a base in one of Palau's states.
-          Currently, there is no system in place that facilitates transaction
-          between Palauans as well as foreigners. This website answers these
-          problems. Welcome to Palau Real Estate! Here, the website allows the
-          click of a button where both problems are taken into account and
-          handled for you!
-        </p>
-      </div>
-      <div class="project-purpose" aria-label="Web application's purpose">
-        <h2>Why Real Estate Palau?</h2>
-        <p>
-          Palau real estate web application's purpose is to allow Palauans to
-          start selling their land locally and internationally: ignite the growth
-          of the real estate market and create another source of cash flow in
-          Palau
-        </p>
-      </div>
-      <div class="help-form" aria-label="Help Form">
-        <h3 class="about-form-title">Question and Help</h3>
-        <form class="" action="mailto:info@reece.reklai@wallawalla.edu" method="post">
-            <label class="about-name" for="name">Name</label>
-            <input type="text" name="" value="">
-            <br>
-            <label class="about-email" for="email">Email</label>
-            <input type="email" name="" value="">
-            <br>
-            <label class="about-message" for="message">Message</label> 
-            <br>
-            <textarea name="name" id="message-box" rows="10" cols="30"></textarea>
-            <br>
-            <input type="submit" name="final-message">
-        </form>
+    <main id="maincontent" class="palau-overview">
+      <div class="flex flex-main">
+
+        <div class="flex-about">
+          <!-- Palau Real Estate Problem -->
+          <div class="palau-problem" aria-label="Palau's Real Estate Problem">
+            <h1>Palau's Real Estate Problem</h1>
+            <p>
+              In Palau, many people own a plot of land. In most cases, it is
+              currently undeveloped. Furthermore, Palau has a unique law that
+              prevents foreigners from owning land. This means that Palauans can
+              only buy and sell land to one another. In order to include foreigners,
+              Palauans can lease their land for 99 years to them. To make matters
+              worse, there will be a huge population increase in a few years because
+              USA is in the process of establishing a base in one of Palau's states.
+              Currently, there is no system in place that facilitates transaction
+              between Palauans as well as foreigners. This website answers these
+              problems. Welcome to Palau Real Estate! Here, the website allows the
+              click of a button where both problems are taken into account and
+              handled for you!
+            </p>
+          </div>
+          <!-- The purpose of the Web Application -->
+          <div class="project-purpose" aria-label="Web application's purpose">
+            <h2>Why Real Estate Palau?</h2>
+            <p>
+              Palau real estate web application's purpose is to allow Palauans to
+              start selling their land locally and internationally: ignite the growth
+              of the real estate market and create another source of cash flow in
+              Palau
+            </p>
+          </div>
+        </div>
+        <div class="flex-about">
+          <div class="help-form" aria-label="Help Form">
+            <h3 class="about-form-title">Question and Help</h3>
+            <!-- Forms -->
+            <form class="" action="mailto:info@reece.reklai@wallawalla.edu" method="post">
+              <label class="about-name" for="name">Name</label>
+              <input type="text" name="" value="">
+              <br>
+              <label class="about-email" for="email">Email</label>
+              <input type="email" name="" value="">
+              <br>
+              <label class="about-message" for="message">Message</label>
+              <br>
+              <textarea name="name" id="message-box" rows="10" cols="30"></textarea>
+              <br>
+              <input type="submit" id="submit-button" name="final-message">
+            </form>
+          </div>
+        </div>
       </div>
     </main>
-  </body>
+  </div>
+
+</body>
+
 </html>
