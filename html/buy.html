@@ -13,16 +13,21 @@
   <link rel="stylesheet" href="../css/flex-style.css" />
   <link rel="stylesheet" href="../css/listing-style.css" />
 </head>
-
+<!-- Body -->
 <body id="buy">
   <div class="topnav">
     <h1 class="listings-buy-title">Listings</h1>
     <a href="#buy-footer" class="split"><img src="../img/icons/arrowdownicon.png" alt="arrow-to-footer"></a>
   </div>
+  <!-- Return to Top Button -->
+  <button onclick="topFunction()" id="topButton" title="Go to top">Top</button>
+  <!-- main -->
   <div id="body-container">
     <main id="maincontent">
       <div class="flex flex-main">
+        <!-- Section 1 -->
         <section class="post flex-item">
+          <!-- Buy -->
           <h3>Ask: $495,000.00</h3>
           <a href="http://remax-palau.com/homes/listing_details/PLW-1568465245">001N06 Ngeruos
             Ngerusar, Babeldaob 96940</a>
@@ -43,6 +48,7 @@
             <li><em>Description:</em> Also available to rent</li>
           </ul>
         </section>
+        <!-- Section 2 -->
         <section class="post flex-item">
           <h3>Ask: $627,700.00</h3>
           <a href="http://remax-palau.com/homes/listing_details/PLW-1579761635">Ngerbodel
@@ -59,6 +65,7 @@
             <li><em>Property Type:</em> Land For Sale</li>
           </ul>
         </section>
+        <!-- Section 3 -->
         <section class="post flex-item">
           <h3>Ask: $2,160,736.00</h3>
           <a href="http://remax-palau.com/homes/listing_details/PLW-1574645710">Ngkeklau
@@ -75,6 +82,7 @@
             <li><em>Property Type:</em> Land For Sale</li>
           </ul>
         </section>
+        <!-- Section 4 -->
         <section class="post flex-item">
           <h3>$234,945.00</h3>
           <a href="http://remax-palau.com/homes/listing_details/PLW-1580187558">Ngerburch
@@ -91,6 +99,7 @@
             <li><em>Property Type:</em> Land for Sale</li>
           </ul>
         </section>
+        <!-- Section 5 -->
         <section class="post flex-item">
           <h3>Ask: $190,000.00</h3>
           <a href="http://remax-palau.com/homes/listing_details/PLW-1579762458">Ngerchemai
@@ -112,7 +121,9 @@
             <li><em>Description:</em> Also available to rent</li>
           </ul>
         </section>
+        <!-- Rent -->
         <h2 id="rent">Rent</h2>
+        <!-- Section 6 -->
         <section class="post flex-item">
           <h3>Ask: $4,000.00</h3>
           <a href="./img/1586929459_SClub-Highlighted.png">Commercial Rental Space
@@ -132,6 +143,7 @@
             <li><em>Square Footage:</em> 2014 SqFt</li>
           </ul>
         </section>
+        <!-- Section 7 -->
         <section class="post flex-item">
           <h3>Ask: $1,200.00</h3>
           <a href="http://remax-palau.com/homes/listing_details/PLW-1574133058">Ngermid
@@ -150,6 +162,7 @@
             <li><em># of Bathrooms:</em> 2</li>
           </ul>
         </section>
+        <!-- Section 8 -->
         <section class="post flex-item">
           <h3>Ask: $1,200.00</h3>
           <a href="http://remax-palau.com/homes/listing_details/PLW-1579761177">Sakurakai
@@ -172,10 +185,33 @@
       </div>
     </main>
   </div>
+  <!-- Footer -->
   <footer id="buy-footer">
     <h5>Author: Reece Reklai</h5>
     <h5>Email: reece. reklai@wallawalla.edu</h5>
   </footer>
+  <!-- Scripts -->
+  <script>
+    // Script for a return button to the top of the webpage
+    // Get the top button
+    const topButton = document.getElementById("topButton");
+
+    // When the user scrolls down by 20px from the top of the webpage, button is displayed
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        topButton.style.display = "block";
+      } else {
+        topButton.style.display = "none";
+      }
+    }
+
+    // Once Button is clicked, Scroll back to top of the webpage
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
   <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
   defer>
