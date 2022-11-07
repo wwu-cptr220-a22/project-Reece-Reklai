@@ -5,11 +5,10 @@
 
 .map {
   background-color: #195cc1;
-  height: 250px;
+  height: 150px;
   width: auto;
   justify-content: right;
   margin-left: 0.5rem;
-  display: none;
 }
 
 /* Incidental Styling */
