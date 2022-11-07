@@ -34,19 +34,19 @@
   flex-direction: row;
 }
 
+/* Google Maps */
+#google-map {
+  width: 70%;
+  max-height: 250px;
+  padding: 0;
+  margin: 0;
+}
+
 /* on 598px OR LARGER displays */
 @media (min-width: 598px) {
   .image-panel {
     display: flex;
   }
-}
-
-/* on 768px OR LARGER displays */
-@media (min-width: 768px) {
-  .map {
-    display: block;
-  }
-
   .map-link {
     display: none;
   }
@@ -63,12 +63,4 @@
   .map {
     margin-left: 3rem;
   }
-}
-
-/* Google Maps */
-#google-map {
-  width: 70%;
-  max-height: 250px;
-  padding: 0;
-  margin: 0;
 }
