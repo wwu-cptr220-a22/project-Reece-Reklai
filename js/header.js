@@ -1,5 +1,5 @@
-//header navbar
 
+//header navbar
 class Header extends HTMLElement {
   constructor() {
     super();
@@ -11,6 +11,7 @@ class Header extends HTMLElement {
       <div class="container-fluid">
         <span class="navbar-brand mb-0 h1"><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house"> Palau
           Real Estate</span>
+
         <div class="navbar-collapse justify-content-end" id="navbarsupportedcontent">
         <input type="text" placeholder="Search..">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -36,3 +37,17 @@ class Header extends HTMLElement {
   }
 }
 customElements.define('my-header', Header)
+
+//Footer info
+class Footer extends HTMLElement {
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.innerHTML = ` <footer id="buy-footer">
+    <h5> © Copyright 2022</h5>
+    <h5>Email: reece. reklai@wallawalla.edu</h5>
+  </footer>`
+  }
+}
+customElements.define('my-footer', Footer)

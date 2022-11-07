@@ -1,3 +1,4 @@
+
 // Get the modal (Index Page)
 const login = document.getElementById('index-login-container')
 
