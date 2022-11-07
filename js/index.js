@@ -1,4 +1,4 @@
-// Get the modal
+// Get the modal (Index Page)
 const login = document.getElementById('index-login-container')
 
 // When the user clicks anywhere outside of the login, close it
@@ -16,7 +16,7 @@ userLogin.addEventListener('click', function () {
   button.style.width = 'auto'
 })
 
-// Initialize and add the map
+// Initialize and add the map (Buy Page)
 function initMap() {
   // The location of Palau
   const palau = { lat: 7.53644, lng: 134.58159 };
