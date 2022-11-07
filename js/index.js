@@ -20,10 +20,20 @@ userLogin.addEventListener('click', function () {
 function initMap() {
   // The location of Palau
   const palau = { lat: 7.53644, lng: 134.58159 };
-  // The map, centered at Palau
-  locations = document.querySelectorAll('.google-maps')
+  let position // declared for each map based on hidden div for lat and lng
+  let latRX = '/(?<=lat: )\d*\.\d*/'
+  let lngRX = '/(?<=lng: )\d*\.\d*/'
 
+  // The map, centered at Palau
+  const locations = document.querySelectorAll('.google-maps')
+  
   locations.forEach(element => {
+    let positionData = element.children.item(0).textContent
+    const newLat = positionData.match(latRX)
+    const newLng = positionData.match(lngRX)
+    console.log (newLat, newLng)
+    // position = { lat: positionData.innerHtml.match(latRX), lng: positionData.innerHtml.match(lngRX) }
+
     const map = new google.maps.Map(element, {
       zoom: 10,
       center: palau,
