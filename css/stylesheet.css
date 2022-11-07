@@ -278,3 +278,8 @@ span.recovery {
 .hidden {
   display: none;
 }
+
+/* Carousel */
+#carousel {
+  margin-top: 300px;
+}
