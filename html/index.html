@@ -20,10 +20,10 @@
 
 <body>
   <!-- Script -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <!-- <script>
+  <<<<<<< HEAD <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <!-- <script>
     // Script for a return button to the top of the webpage
     // Get the top button
     const carousel = document.getElementById("carousel");
@@ -38,95 +38,112 @@
       }
     }
   </script> -->
-  <!-- Header -->
-  <header class="main-navbar" aria-label="navigation links">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1"><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house"> Palau
-          Real Estate</span>
-        <div class="navbar-collapse justify-content-end" id="navbarsupportedcontent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item" aria-current="about link">
-              <a class="nav-link active" id="about-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item" id="buy-link" aria-current="buy link">
-              <a class="nav-link active" href="buy.html">Buy</a>
-            </li>
-            <li class="nav-item" id="lease-link" aria-current="lease link">
-              <a class="nav-link" href="#">Lease</a>
-            </li>
-            <li class="nav-item" id="sell-link" aria-current="sell link">
-              <a class="nav-link" href="#">Sell</a>
-            </li>
-            <li id="user-login" class="nav-item" aria-current="login">
-              <a class="nav-link active" role="button" href="#">Login</a>
-            </li>
-          </ul>
+    =======
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    >>>>>>> 6f2da3ed3159f62550e8ea308dfbadf9fd8d4ffb
+    <!-- Header -->
+    <header class="main-navbar" aria-label="navigation links">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1"><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house"> Palau
+            Real Estate</span>
+          <div class="navbar-collapse justify-content-end" id="navbarsupportedcontent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item" aria-current="about link">
+                <a class="nav-link active" id="about-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item" id="buy-link" aria-current="buy link">
+                <a class="nav-link active" href="buy.html">Buy</a>
+              </li>
+              <li class="nav-item" id="lease-link" aria-current="lease link">
+                <a class="nav-link" href="#">Lease</a>
+              </li>
+              <li class="nav-item" id="sell-link" aria-current="sell link">
+                <a class="nav-link" href="#">Sell</a>
+              </li>
+              <li id="user-login" class="nav-item" aria-current="login">
+                <a class="nav-link active" role="button" href="#">Login</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+    </header>
+    <!-- Main -->
+    <main id="carousel" aria-label="carousel">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../img/palau-background/palau-beach.jpg" class="d-block w-100" alt="palau-beach">
+          </div>
+          <div class="carousel-item">
+            <img src="../img/palau-background/resort.jpg" class="d-block w-100" alt="palau-resort">
+          </div>
+          <div class="carousel-item">
+            <img src="..//img/palau-background/rock-island-life.jpg" class="d-block w-100" alt="palau-rock-island-life">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </nav>
-  </header>
-  <!-- Main -->
-  <main id="carousel" aria-label="carousel">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="../img/palau-background/palau-beach.jpg" class="d-block w-100" alt="palau-beach">
-        </div>
-        <div class="carousel-item">
-          <img src="../img/palau-background/resort.jpg" class="d-block w-100" alt="palau-resort">
-        </div>
-        <div class="carousel-item">
-          <img src="..//img/palau-background/rock-island-life.jpg" class="d-block w-100" alt="palau-rock-island-life">
-        </div>
+      <div id="weather"></div>
+    </main>
+    <!-- Login Button -->
+    <section class="login" aria-label="login box">
+
+      <div id="index-login-container" class="modal">
+
+        <form class="login-content animate" action="/action_page.php" method="post">
+
+          <div class="index-form-content">
+            <label for="username"><b>Username</b></label>
+            <input id="index-username" type="text" placeholder="Enter Username" name="username" required>
+
+            <label for="password"><b>Password</b></label>
+            <input id="index-password" type="password" placeholder="Enter Password" name="password" required>
+
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+
+          <div class="index-form-content" style="background-color:#c5c5c54d">
+            <button type="button" onclick="document.getElementById('index-login-container').style.display='none'"
+              class="cancelbtn">Cancel</button>
+            <span class="recovery"> <a href="#">Sign Up</a> | Forgot <a href="#">password?</a></span>
+          </div>
+        </form>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <div id="weather"></div>
-  </main>
-  <!-- Login Button -->
-  <section class="login" aria-label="login box">
-
-    <div id="index-login-container" class="modal">
-
-      <form class="login-content animate" action="/action_page.php" method="post">
-
-        <div class="index-form-content">
-          <label for="username"><b>Username</b></label>
-          <input id="index-username" type="text" placeholder="Enter Username" name="username" required>
-
-          <label for="password"><b>Password</b></label>
-          <input id="index-password" type="password" placeholder="Enter Password" name="password" required>
-
-          <button type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-        </div>
-
-        <div class="index-form-content" style="background-color:#c5c5c54d">
-          <button type="button" onclick="document.getElementById('index-login-container').style.display='none'"
-            class="cancelbtn">Cancel</button>
-          <span class="recovery"> <a href="#">Sign Up</a> | Forgot <a href="#">password?</a></span>
-        </div>
-      </form>
-    </div>
-  </section>
-  <!-- Scripts -->
-  <!-- Load JavaScript libraries here -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.js"></script>
-  <script src="../js/weather.js"></script>
-  <script src="../js/index.js"></script>
+    </section>
+    <!-- Scripts -->
+    <script>
+      // Script for a return button to the top of the webpage
+      // Get the carousel class in main
+      const carousel = document.getElementById("carousel")
+      carousel.style.visibility = "hidden";
+      // When the user scrolls down by 20px from the top of the webpage, button is displayed
+      window.onscroll = function () { scrollFunction() }
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          carousel.style.visibility = "visible"
+        } else {
+          carousel.style.visibility = "hidden"
+        }
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.js"></script>
+    <script src="../js/index.js"></script>
 </body>
-
 </html>
