@@ -34,11 +34,12 @@
 }
 
 /* Google Maps */
-#google-map {
-  width: 70%;
+.google-maps {
+  width: 65%;
   max-height: 250px;
   padding: 0;
   margin: 0;
+  margin-left: 0.5rem;
 }
 
 /* on 598px OR LARGER displays */

@@ -21,14 +21,28 @@ function initMap() {
   // The location of Palau
   const palau = { lat: 7.53644, lng: 134.58159 };
   // The map, centered at Palau
-  const map = new google.maps.Map(document.getElementById("google-map"), {
-    zoom: 10,
-    center: palau,
+  locations = document.querySelectorAll('.google-maps')
+
+  locations.forEach(element => {
+    const map = new google.maps.Map(element, {
+      zoom: 10,
+      center: palau,
+    });
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+      position: palau,
+      map: map,
+    });
   });
+
+  // const map = new google.maps.Map(document.getElementById("google-map"), {
+  //   zoom: 10,
+  //   center: palau,
+  // });
   // The marker, positioned at Uluru
-  const marker = new google.maps.Marker({
-    position: palau,
-    map: map,
-  });
+  // const marker = new google.maps.Marker({
+  //   position: palau,
+  //   map: map,
+  // });
 }
 window.initMap = initMap;
