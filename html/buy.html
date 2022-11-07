@@ -30,9 +30,7 @@
           <div class="image-panel">
             <img class="listing-photo" alt="Picture of a house"
               src="http://remax-palau.com/uploads/listings/1602145527_Entry.JPG">
-            <img class="map"
-              src="https://cdn1.iconfinder.com/data/icons/ui-essential-17/32/UI_Essential_Outline_2_essential-app-ui-location-map-pin-22-512.png"
-              alt="map">
+              <div id="google-map"></div>
           </div>
           <div>
             <a href="#" class="map-link">View on Google Maps</a>
@@ -192,7 +190,11 @@
     <h5>Author: Reece Reklai</h5>
     <h5>Email: reece. reklai@wallawalla.edu</h5>
   </footer>
-
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+  defer>
+  </script>
+  <script src="../js/index.js"></script>
 </body>
 
 </html>

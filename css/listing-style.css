@@ -64,3 +64,11 @@
     margin-left: 3rem;
   }
 }
+
+/* Google Maps */
+#google-map {
+  width: 70%;
+  max-height: 250px;
+  padding: 0;
+  margin: 0;
+}

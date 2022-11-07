@@ -15,3 +15,21 @@ userLogin.addEventListener('click', function () {
   button.style.display = 'block'
   button.style.width = 'auto'
 })
+
+// Initialize and add the map
+function initMap() {
+  // The location of Palau
+  const palau = { lat: 7.53644, lng: 134.58159 };
+  // The map, centered at Palau
+  const map = new google.maps.Map(document.getElementById("google-map"), {
+    zoom: 10,
+    center: palau,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: palau,
+    map: map,
+  });
+}
+
+window.initMap = initMap;
