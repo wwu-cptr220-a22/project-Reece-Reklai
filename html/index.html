@@ -71,7 +71,7 @@
   </header>
   <!-- Main -->
   <main id="carousel" aria-label="carousel">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="../img/palau-background/palau-beach.jpg" class="d-block w-100" alt="palau-beach">
@@ -133,10 +133,12 @@
     // When the user scrolls down by 20px from the top of the webpage, button is displayed
     window.onscroll = function () { scrollFunction() }
     function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         carousel.style.visibility = "visible"
+        carousel.style.animation = "fadeIn 4.0s"
       } else {
         carousel.style.visibility = "hidden"
+        carousel.style.animation = "fadeOut 4.0s"
       }
     }
   </script>
