@@ -12,7 +12,7 @@
 
 /* Body image for all webpages */
 body {
-  background-image: url("../img/palau-background/palau-land.jpg");
+  background-image: url("../img/palau-background/resort.jpg");
   background-repeat: no-repeat;
   background-size: auto;
   background-color: rgba(0 0 0 / 50%);
@@ -239,7 +239,7 @@ span.recovery {
 
 /* Carousel */
 #carousel {
-  margin-top: 500px;
+  margin-top: 750px;
 }
 
 @keyframes fadeIn {
