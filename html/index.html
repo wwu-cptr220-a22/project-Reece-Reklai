@@ -17,6 +17,23 @@
 </head>
 <!-- Body -->
 <body>
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- <script>
+    // Script for a return button to the top of the webpage
+    // Get the top button
+    const carousel = document.getElementById("carousel");
+    carousel.style.visibility = "visible";
+    // When the user scrolls down by 20px from the top of the webpage, button is displayed
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        carousel.style.visibility = "visible";
+      } else {
+        carousel.style.visibility = "visible";
+      }
+    }
+  </script> -->
   <!-- Header -->
   <header class="main-navbar" aria-label="navigation links">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -45,7 +62,28 @@
     </nav>
   </header>
   <!-- Main -->
-  <main class="search" aria-label="search bar">
+  <main id="carousel" aria-label="carousel">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../img/palau-background/palau-beach.jpg" class="d-block w-100" alt="palau-beach">
+        </div>
+        <div class="carousel-item">
+          <img src="../img/palau-background/resort.jpg" class="d-block w-100" alt="palau-resort">
+        </div>
+        <div class="carousel-item">
+          <img src="..//img/palau-background/rock-island-life.jpg" class="d-block w-100" alt="palau-rock-island-life">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </main>
   <!-- Login Button -->
   <section class="login" aria-label="login box">
