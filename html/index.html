@@ -5,7 +5,8 @@
   <meta charset="utf-8" />
   <meta name="description"
     content="Mainly, Palau's land and variety other Real Estate options is available through this online platform. Locals can buy land while foreigner can lease it. Both of which can sell their respective Real Estate in Palau here and now!">
-  <meta name="keywords" content="Palau, Real Estate, Island Real Estate land, Pacific Real Estate land, Micronesia Real Estate land">
+  <meta name="keywords"
+    content="Palau, Real Estate, Island Real Estate land, Pacific Real Estate land, Micronesia Real Estate land">
   <meta name="author" content="Reece Reklai">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,10 +17,13 @@
   <link rel="stylesheet" href="../css/stylesheet.css">
 </head>
 <!-- Body -->
+
 <body>
   <!-- Script -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <!-- <script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- <script>
     // Script for a return button to the top of the webpage
     // Get the top button
     const carousel = document.getElementById("carousel");
@@ -38,7 +42,8 @@
   <header class="main-navbar" aria-label="navigation links">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1"><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house"> Palau Real Estate</span>
+        <span class="navbar-brand mb-0 h1"><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house"> Palau
+          Real Estate</span>
         <div class="navbar-collapse justify-content-end" id="navbarsupportedcontent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item" aria-current="about link">
@@ -57,8 +62,8 @@
               <a class="nav-link active" role="button" href="#">Login</a>
             </li>
           </ul>
-          </div>
         </div>
+      </div>
     </nav>
   </header>
   <!-- Main -->
@@ -75,44 +80,53 @@
           <img src="..//img/palau-background/rock-island-life.jpg" class="d-block w-100" alt="palau-rock-island-life">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+    <div id="weather"></div>
   </main>
   <!-- Login Button -->
   <section class="login" aria-label="login box">
 
     <div id="index-login-container" class="modal">
-  
+
       <form class="login-content animate" action="/action_page.php" method="post">
-    
+
         <div class="index-form-content">
           <label for="username"><b>Username</b></label>
           <input id="index-username" type="text" placeholder="Enter Username" name="username" required>
-    
+
           <label for="password"><b>Password</b></label>
           <input id="index-password" type="password" placeholder="Enter Password" name="password" required>
-            
+
           <button type="submit">Login</button>
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
         </div>
-    
+
         <div class="index-form-content" style="background-color:#c5c5c54d">
-          <button type="button" onclick="document.getElementById('index-login-container').style.display='none'" class="cancelbtn">Cancel</button>
+          <button type="button" onclick="document.getElementById('index-login-container').style.display='none'"
+            class="cancelbtn">Cancel</button>
           <span class="recovery"> <a href="#">Sign Up</a> | Forgot <a href="#">password?</a></span>
         </div>
       </form>
     </div>
   </section>
   <!-- Scripts -->
+  <!-- Load JavaScript libraries here -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.js"></script>
+  <script src="../js/weather.js"></script>
   <script src="../js/index.js"></script>
 </body>
+
 </html>
