@@ -251,3 +251,9 @@ span.recovery {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+.weather-status {
+  background-color: #000;
+  color: white;
+  margin-bottom: 446px;
+}
