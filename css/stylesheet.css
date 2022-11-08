@@ -255,6 +255,11 @@ span.recovery {
   color: black;
 }
 
+#home-link a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
 #about-link a:hover {
   background-color: #ddd;
   color: black;
