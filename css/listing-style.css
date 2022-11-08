@@ -47,6 +47,7 @@
   .image-panel {
     display: flex;
   }
+
   .map-link {
     display: none;
   }
@@ -66,11 +67,11 @@
 }
 
 /* Return to Top Button */
-#topButton:hover {
+#top-button {
   background-color: black;
 }
 
-#topButton {
+#top-button {
   display: none;
   width: 60px;
   position: fixed;

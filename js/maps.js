@@ -1,16 +1,16 @@
 // Initialize and add the map (Buy Page)
-function initMap() {
+function initMap () {
   // The location of Palau
-  const palau = { lat: 7.53644, lng: 134.58159 };
+  const palau = { lat: 7.53644, lng: 134.58159 }
   let position // declared for each map based on hidden div for lat and lng
-  let latRX = /lat:\s[\d]*\.[\d]*/ // tests don't like possitive lookbehind
-  let lngRX = /lng:\s[\d]*\.[\d]*/
+  const latRX = /lat:\s[\d]*\.[\d]*/ // tests don't like positive lookbehind
+  const lngRX = /lng:\s[\d]*\.[\d]*/
 
   // The map, centered at Palau
   const locations = document.querySelectorAll('.google-maps')
 
   locations.forEach(element => {
-    let positionData = element.children.item(0).textContent
+    const positionData = element.children.item(0).textContent
 
     let newLat = Number(positionData.match(latRX)[0].substring(4))
     let newLng = Number(positionData.match(lngRX)[0].substring(4))
@@ -29,14 +29,14 @@ function initMap() {
     // eslint-disable-next-line no-undef
     const map = new google.maps.Map(element, {
       zoom: 11,
-      center: position,
-    });
+      center: position
+    })
     // The marker, (default) positioned at Uluru
     // eslint-disable-next-line no-undef
     new google.maps.Marker({
-      position: position,
-      map: map,
-    });
-  });
+      position,
+      map
+    })
+  })
 }
-window.initMap = initMap;
+window.initMap = initMap
