@@ -253,7 +253,15 @@ span.recovery {
 }
 
 .weather-status {
-  background-color: #000;
+  background-color: rgba(0 0 0 / 80%);
   color: white;
-  margin-bottom: 446px;
+  margin-top: 1000px;
+}
+
+.carousel-control-prev {
+  background-color: rgba(0 0 0 / 80%);
+}
+
+.carousel-control-next {
+  background-color: rgba(0 0 0 / 80%);
 }

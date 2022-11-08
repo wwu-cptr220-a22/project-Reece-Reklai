@@ -14,16 +14,18 @@ function renderError (error) {
 }
 
 function renderSearchResults (results) {
-  // get forecast from HTML page from weather report
-  const header = document.createElement('p')
-  const forecastParagraph = document.createElement('p')
-  header.textContent = 'CITY\tSKY/WX\tTMP\tDP\tRH\tWIND\tPRESSURE\tREMARKS'
-  console.log(header)
-  const forecast = parseForecast(results)
-  const weather = document.querySelector('#weather') // weather div
-  forecastParagraph.textContent = forecast
-  weather.appendChild(header)
-  weather.appendChild(forecastParagraph)
+  const weather = document.querySelectorAll('.weather') // weather div
+  weather.forEach(element => {
+    // get forecast from HTML page from weather report
+    const header = document.createElement('p')
+    const forecastParagraph = document.createElement('p')
+    header.textContent = 'CITY\tSKY/WX\tTMP\tDP\tRH\tWIND\tPRESSURE\tREMARKS'
+    console.log(header)
+    const forecast = parseForecast(results)
+    forecastParagraph.textContent = forecast
+    element.appendChild(header)
+    element.appendChild(forecastParagraph)
+  })
 }
 
 function parseForecast (weatherPage) {
