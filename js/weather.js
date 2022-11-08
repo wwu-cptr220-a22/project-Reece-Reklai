@@ -17,7 +17,7 @@ function renderSearchResults(results) {
     // get forecast from HTML page from weather report
     const header = document.createElement('p')
     const forecastParagraph = document.createElement('p')
-    header.textContent = 'CITY           SKY/WX    TMP DP  RH WIND       PRES   REMARKS'
+    header.textContent = 'CITY\tSKY/WX\tTMP\tDP\tRH\tWIND\tPRESSURE\tREMARKS'
     console.log(header)
     const forecast = parseForecast(results)
     const weather = document.querySelector('#weather') // weather div
