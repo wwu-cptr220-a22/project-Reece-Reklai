@@ -16,11 +16,13 @@ function renderError (error) {
 function renderSearchResults (results) {
   const weather = document.querySelectorAll('.weather') // weather div
   weather.forEach(element => {
+
     // get forecast from HTML page from weather report
     const header = document.createElement('p')
     const forecastParagraph = document.createElement('p')
     header.textContent = 'CITY\tSKY/WX\tTMP\tDP\tRH\tWIND\tPRESSURE\tREMARKS'
-    console.log(header)
+
+    // console.log(header)
     const forecast = parseForecast(results)
     forecastParagraph.textContent = forecast
     element.appendChild(header)
@@ -39,8 +41,8 @@ function parseForecast (weatherPage) {
 
   startIndex = workingData.match(kororRX).index
   const endIndex = workingData.match(kororEndRX).index
-  console.log(startIndex, endIndex)
-  console.log(workingData.substring(startIndex, endIndex))
+  // console.log(startIndex, endIndex)
+  // console.log(workingData.substring(startIndex, endIndex))
   return workingData.substring(startIndex, endIndex)
 }
 
