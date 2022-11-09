@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../css/listing-style.css">
 </head>
 <!-- Body -->
+
 <body id="buy">
   <div class="topnav">
     <h1 class="listings-buy-title">Listings</h1>
@@ -37,7 +38,9 @@
           <div class="image-panel">
             <img class="listing-photo" alt="Picture of a house"
               src="https://remax-palau.com/uploads/listings/1602145527_Entry.JPG">
-              <div class="google-maps"><div class="hidden">lat: 7.496529, lng: 134.568938</div></div>
+            <div class="google-maps">
+              <div class="hidden">lat: 7.496529, lng: 134.568938</div>
+            </div>
           </div>
           <div>
             <a href="#" class="map-link">View on Google Maps</a>
@@ -58,7 +61,9 @@
           <div class="image-panel">
             <img class="listing-photo" alt="Picture of an oceanside series of buildings"
               src="https://remax-palau.com/uploads/listings/1579761635_DJI_0132.JPG">
-              <div class="google-maps"><div class="hidden">lat: 7.350895, lng: 134.494151</div></div>
+            <div class="google-maps">
+              <div class="hidden">lat: 7.350895, lng: 134.494151</div>
+            </div>
           </div>
           <div>
             <a href="#" class="map-link">View on Google Maps</a>
@@ -75,7 +80,9 @@
           <div class="image-panel">
             <img class="listing-photo" alt="Satellite Image"
               src="https://remax-palau.com/uploads/listings/1574645710_E02_Ngkeklau.jpg">
-              <div class="google-maps"><div class="hidden">lat: 7.589005, lng: 134.629723</div></div>
+            <div class="google-maps">
+              <div class="hidden">lat: 7.589005, lng: 134.629723</div>
+            </div>
           </div>
           <div>
             <a href="#" class="map-link">View on Google Maps</a>
@@ -92,7 +99,9 @@
           <div class="image-panel">
             <img class="listing-photo" alt="No Photo of Location"
               src="https://cdn4.iconfinder.com/data/icons/sapphire-storm-1/32/color-web3-14-256.png">
-              <div class="google-maps"><div class="hidden">lat: 7.504831, lng: 134.622838</div></div>
+            <div class="google-maps">
+              <div class="hidden">lat: 7.504831, lng: 134.622838</div>
+            </div>
           </div>
           <div>
             <a href="#" class="map-link">View on Google Maps</a>
@@ -110,7 +119,9 @@
           <div class="image-panel">
             <img class="listing-photo" alt="Picture of a house"
               src="https://remax-palau.com/uploads/listings/1579827453_Ngerchemai-Eunice.jpg">
-              <div class="google-maps"><div class="hidden">lat: 7.346951, lng: 134.488288</div></div>
+            <div class="google-maps">
+              <div class="hidden">lat: 7.346951, lng: 134.488288</div>
+            </div>
           </div>
           <div>
             <a href="#" class="map-link">View on Google Maps</a>
@@ -135,7 +146,9 @@
           <div class="image-panel">
             <img class="listing-photo" alt="Motel Facade"
               src="https://remax-palau.com/uploads/listings/1586929459_SClub-Highlighted.png">
-              <div class="google-maps"><div class="hidden">lat: 7.333217, lng: 134.456081</div></div>
+            <div class="google-maps">
+              <div class="hidden">lat: 7.333217, lng: 134.456081</div>
+            </div>
           </div>
           <div>
             <a href="#" class="map-link">View on Google Maps</a>
@@ -153,7 +166,9 @@
           <div class="image-panel">
             <img class="listing-photo" alt="House interior"
               src="https://remax-palau.com/uploads/listings/1574133479_Ngermid_Dolores_1_Web.jpg">
-              <div class="google-maps"><div class="hidden">lat: 7.337128, lng: 134.502796</div></div>
+            <div class="google-maps">
+              <div class="hidden">lat: 7.337128, lng: 134.502796</div>
+            </div>
           </div>
           <div>
             <a href="#" class="map-link">View on Google Maps</a>
@@ -172,7 +187,9 @@
           <div class="image-panel">
             <img class="listing-photo" alt="Picture of a house"
               src="https://remax-palau.com/uploads/listings/1579761206_JToribion.jpg">
-              <div class="google-maps"><div class="hidden">lat: 7.346533, lng: 134.492179</div></div>
+            <div class="google-maps">
+              <div class="hidden">lat: 7.346533, lng: 134.492179</div>
+            </div>
           </div>
           <div>
             <a href="#" class="map-link">View on Google Maps</a>
@@ -199,7 +216,7 @@
     const topButton = document.getElementById("top-button");
 
     // When the user scrolls down by 20px from the top of the webpage, button is displayed
-    window.onscroll = function() {scrollFunction()};
+    window.onscroll = function () { scrollFunction() };
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         topButton.style.display = "block";
@@ -215,10 +232,51 @@
     }
   </script>
   <script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIvBhGsNo2E_QcMZgnuZw4wZ-eh0fVDcY&callback=initMap&v=weekly"
-  defer>
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIvBhGsNo2E_QcMZgnuZw4wZ-eh0fVDcY&callback=initMap&v=weekly"
+    defer>
+    </script>
+  <script>
+    // Initialize and add the map (Buy Page)
+    function initMap() {
+      // The location of Palau
+      const palau = { lat: 7.53644, lng: 134.58159 }
+      let position // declared for each map based on hidden div for lat and lng
+      const latRX = /lat:\s[\d]*\.[\d]*/ // tests don't like positive lookbehind
+      const lngRX = /lng:\s[\d]*\.[\d]*/
+
+      // The map, centered at Palau
+      const locations = document.querySelectorAll('.google-maps')
+
+      locations.forEach(element => {
+        const positionData = element.children.item(0).textContent
+
+        let newLat = Number(positionData.match(latRX)[0].substring(4))
+        let newLng = Number(positionData.match(lngRX)[0].substring(4))
+        if (newLat === null) {
+          newLat = palau.lat
+        }
+        if (newLng === null) {
+          newLng = palau.lng
+        }
+
+        // console.log(newLat, newLng)
+        position = { lat: newLat, lng: newLng }
+
+        // new map zoomed in a little over Palau
+        const map = new google.maps.Map(element, {
+          zoom: 11,
+          center: position
+        })
+
+        // The marker, (default) positioned at Uluru
+        new google.maps.Marker({
+          position,
+          map
+        })
+      })
+    }
+    window.initMap = initMap
   </script>
-  <script src="../js/maps.js"></script>
 </body>
 
 </html>
