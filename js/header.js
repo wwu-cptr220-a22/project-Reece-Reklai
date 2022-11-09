@@ -65,6 +65,7 @@ class Header extends HTMLElement {
 }
 customElements.define('my-header', Header)
 
+
 //Footer info
 class Footer extends HTMLElement {
   constructor() {
