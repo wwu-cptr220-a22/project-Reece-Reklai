@@ -1,5 +1,6 @@
 #body-container {
-  background-color: #0000004f;
+  background-color: rgba(0 0 0 / 60%);
+  margin-top: 50px;
 }
 
 .flex-main {
@@ -43,11 +44,6 @@ input {
 
 .project-purpose {
   color: whitesmoke;
-}
-
-.palau-overview {
-  background-color: rgba(0 0 0 / 60%);
-  margin-top: 30px;
 }
 
 .about-email {
