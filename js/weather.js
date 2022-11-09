@@ -33,7 +33,7 @@ function parseForecast (weatherPage) {
   const kororRX = /KOROR AP/
   const kororEndRX = /KOROR WSO/
   let startIndex = weatherPage.match(startRX).index
-  
+
   // arbitrary cutoff to contain all relivant data
   const workingData = weatherPage.substring(startIndex, startIndex + 1300)
 
