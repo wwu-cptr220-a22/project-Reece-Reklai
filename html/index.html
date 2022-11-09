@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <meta name="description"
     content="Mainly, Palau's land and variety other Real Estate options is available through this online platform. Locals can buy land while foreigner can lease it. Both of which can sell their respective Real Estate in Palau here and now!">
   <meta name="keywords"
     content="Palau, Real Estate, Island Real Estate land, Pacific Real Estate land, Micronesia Real Estate land">
   <meta name="author" content="Reece Reklai">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Real Estate Palau</title>
   <link rel="icon" type="image/x-icon" href="../img/icons/favicon.ico">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -31,25 +31,46 @@
 
   <!-- Main -->
   <main id="carousel" aria-label="carousel">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+    <div id="carousel-example-dark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+      <!-- <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel-example-dark" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel-example-dark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel-example-dark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div> -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="../img/palau-background/palau-beach.jpg" class="d-block w-100" alt="palau-beach">
+          <img src="../img/palau-background/resort.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-md-block">
+            <div class="weather-status">
+              <h5>Palau Weather Status</h5>
+              <div class="weather"></div>
+            </div>
+          </div>
         </div>
         <div class="carousel-item">
-          <img src="../img/palau-background/resort.jpg" class="d-block w-100" alt="palau-resort">
+          <img src="../img/palau-background/palau-beach.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-block">
+          <div class="weather-status">
+            <h5>Palau Weather Status</h5>
+            <div class="weather"></div>
+          </div>
+          </div>
         </div>
         <div class="carousel-item">
-          <img src="..//img/palau-background/rock-island-life.jpg" class="d-block w-100" alt="palau-rock-island-life">
+          <img src="../img/palau-background/sealife.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-md-block">
+          <div class="weather-status">
+            <h5>Palau Weather Status</h5>
+            <div class="weather"></div>
+          </div>
+          </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-        data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
@@ -64,16 +85,19 @@
     // When the user scrolls down by 20px from the top of the webpage, button is displayed
     window.onscroll = function () { scrollFunction() }
     function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         carousel.style.visibility = "visible"
+        carousel.style.animation = "fade-in 3.0s"
       } else {
         carousel.style.visibility = "hidden"
+        carousel.style.animation = "fade-out 3.0s"
       }
     }
-    customElements.define('my-header', Header)
   </script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.js"></script>
   <script src="../js/index.js"></script>
+  <script src="../js/weather.js"></script>
 </body>
 
 </html>

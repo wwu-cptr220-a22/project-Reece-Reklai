@@ -26,7 +26,7 @@ body {
 }
 
 #buy {
-  background-image: url("../img/palau-background/rock-island.jpg");
+  background-image: url("../img/palau-background/rock-island-life.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -56,7 +56,7 @@ body {
 #buy-footer {
   color: white;
   text-align: center;
-  background-color: rgba(0 0 0 45%);
+  background-color: rgba(0 0 0 / 45%);
   margin-top: 5px;
 }
 
@@ -286,5 +286,29 @@ span.recovery {
 
 /* Carousel */
 #carousel {
-  margin-top: 300px;
+  margin-top: 750px;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade-out {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.weather-status {
+  background-color: #000;
+  background-color: rgba(0 0 0 / 80%);
+  color: white;
+}
+
+.carousel-control-prev {
+  background-color: rgba(0 0 0 / 80%);
+}
+
+.carousel-control-next {
+  background-color: rgba(0 0 0 / 80%);
 }

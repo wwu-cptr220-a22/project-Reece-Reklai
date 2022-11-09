@@ -47,6 +47,7 @@
   .image-panel {
     display: flex;
   }
+
   .map-link {
     display: none;
   }
@@ -65,12 +66,7 @@
   }
 }
 
-/* Return to Top Button */
-#topButton:hover {
-  background-color: black;
-}
-
-#topButton {
+#top-button {
   display: none;
   width: 60px;
   position: fixed;
@@ -82,4 +78,9 @@
   color: white;
   padding: 15px;
   border-radius: 5px;
+}
+
+/* Return to Top Button */
+#top-button:hover {
+  background-color: cadetblue;
 }
