@@ -16,7 +16,6 @@ function renderError (error) {
 function renderSearchResults (results) {
   const weather = document.querySelectorAll('.weather') // weather div
   weather.forEach(element => {
-
     // get forecast from HTML page from weather report
     const header = document.createElement('p')
     const forecastParagraph = document.createElement('p')
