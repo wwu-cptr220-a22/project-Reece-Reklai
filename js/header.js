@@ -1,44 +1,48 @@
-//header navbar
+// header navbar
 class Header extends HTMLElement {
-  constructor() {
-    super();
-  }
-  connectedCallback() {
+  connectedCallback () {
     this.innerHTML = `
-    <script src="../js/index.js" type="text/javascript" defer></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <header class="main-navbar" aria-label="navigation links">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1"><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house"> Palau
-          Real Estate</span>
-        <div class="navbar-collapse justify-content-end" id="navbarsupportedcontent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item" id="search-bar" > 
-              <input type="text" placeholder="Search.."> 
-            </li>
-            <li class="nav-item" id="home-link" aria-current="home link">
-              <a class="nav-link active" href="index.html">Home</a>
-            </li>
-            <li class="nav-item" id="about-link" aria-current="about link">
-              <a class="nav-link active" href="about.html">About</a>
-            </li>
-            <li class="nav-item" id="buy-link" aria-current="buy link">
-              <a class="nav-link active" href="buy.html">Buy</a>
-            </li>
-            <li class="nav-item" id="lease-link" aria-current="lease link">
-              <a class="nav-link" href="#">Lease</a>
-            </li>
-            <li class="nav-item" id="sell-link" aria-current="sell link">
-              <a class="nav-link" href="#">Sell</a>
-            </li>
-            <li class="nav-item" id="user-login" aria-current="login">
-              <a class="nav-link active" role="button" href="#">Login</a>
-            </li>
-          </ul>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house"> Palau
+            Real Estate</span>
+            <div class="navbar-collapse justify-content-end" id="navbarsupportedcontent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item" id="search-bar" aria-current="search bar"> 
+                  <form class="example" action="action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                  </form>
+                </li>
+                <li>
+                  <form class="example" action="action_page.php">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                  </form>
+                </li>
+                <li class="nav-item" id="home-link" aria-current="home link">
+                  <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item" id="about-link" aria-current="about link">
+                  <a class="nav-link active" href="about.html">About</a>
+                </li>
+                <li class="nav-item" id="buy-link" aria-current="buy link">
+                  <a class="nav-link active" href="buy.html">Buy</a>
+                </li>
+                <li class="nav-item" id="lease-link" aria-current="lease link">
+                  <a class="nav-link" href="#">Lease</a>
+                </li>
+                <li class="nav-item" id="sell-link" aria-current="sell link">
+                  <a class="nav-link" href="#">Sell</a>
+                </li>
+                <li class="nav-item" id="user-login" aria-current="login">
+                  <a class="nav-link active" role="button" href="#">Login</a>
+                </li>
+              </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
     <!-- Login Button -->
     <section class="login" aria-label="login box">
       <div id="index-login-container" class="modal">
@@ -60,21 +64,23 @@ class Header extends HTMLElement {
           </div>
         </form>
       </div>
-    </section>`
+    </section>
+    <script src="../js/index.js" type="text/javascript" defer></script>
+    `
   }
 }
 customElements.define('my-header', Header)
 
-
-//Footer info
+// Footer info
 class Footer extends HTMLElement {
-  constructor() {
-    super();
+  constructor () {
+    super()
   }
-  connectedCallback() {
+
+  connectedCallback () {
     this.innerHTML = ` <footer id="buy-footer">
     <h5> © Copyright 2022</h5>
-    <h5>Email: reece. reklai@wallawalla.edu</h5>
+    <h5>Palau Real Estate </h5>
   </footer>`
   }
 }
