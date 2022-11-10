@@ -1,8 +1,3 @@
-/* Navbar in home page */
-.main-navbar {
-  display: block;
-}
-
 /* Favicon */
 #favicon {
   width: 50px;
@@ -30,22 +25,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-}
-
-/* Create a right-aligned (split) link inside the navigation bar */
-.topnav .split {
-  float: right;
-  background-color: lightblue;
-  color: black;
-  display: block;
-}
-
-/* The bottom of the buy webpage */
-#buy-footer {
-  color: white;
-  text-align: center;
-  background-color: rgba(0 0 0 / 45%);
-  margin-top: 5px;
 }
 
 /* Listing title in buy webpage */
@@ -125,13 +104,27 @@ span.recovery {
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0 0 0); /* Fallback color */
-  background-color: rgba(0 0 0 / 70%); /* Black w/ opacity */
+  display: none;
+
+  /* Hidden by default */
+  position: fixed;
+
+  /* Stay in place */
+  width: 100%;
+
+  /* Full width */
+  height: 100%;
+
+  /* Full height */
+  overflow: auto;
+
+  /* Enable scroll if needed */
+  background-color: rgb(0 0 0);
+
+  /* Fallback color */
+  background-color: rgba(0 0 0 / 70%);
+
+  /* Black w/ opacity */
   padding-top: 100px;
 }
 
@@ -164,13 +157,23 @@ span.recovery {
 }
 
 @keyframes animatezoom {
-  from { transform: scale(0); }
-  to { transform: scale(1); }
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
 
 @keyframes animatezoom {
-  from { transform: scale(0); }
-  to { transform: scale(1); }
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
 
 /* Change styles for span and cancel button on extra small screens */
@@ -185,14 +188,36 @@ span.recovery {
   }
 }
 
+/* Create a right-aligned (split) link inside the navigation bar */
+.main-navbar .split {
+  float: right;
+  background-color: lightblue;
+  color: black;
+  display: block;
+}
+
+/* Style the search box inside the navigation bar */
+.main-navbar input[type="text"] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  text-decoration-color: rgb(99 96 96);
+  background-color: #333;
+}
+
 /* Style the links inside the navigation bar (Navbar for Buy webpage) */
-.topnav {
+.main-navbar {
+  display: block;
+  box-sizing: border-box;
   background-color: #333;
   overflow: hidden;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
+.main-navbar a {
   float: left;
   color: #060606;
   text-align: center;
@@ -202,35 +227,61 @@ span.recovery {
 }
 
 /* Change the color of links on hover */
-.topnav a:hover {
+.main-navbar a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Nav bar hover highlights the links on the index webpage */
-#buy-link a:hover {
-  background-color: #ddd;
-  color: black;
+/* Style the "active" element to highlight the current page */
+.main-navbar a.active {
+  color: white;
 }
 
-#about-link a:hover {
+.main-navbar .search-container {
+  float: right;
   background-color: #ddd;
-  color: black;
 }
 
-#sell-link a:hover {
-  background-color: #ddd;
-  color: black;
+form.example input[type="text"] {
+  padding: 5px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 90%;
+  background: #f1f1f1;
 }
 
-#lease-link a:hover {
-  background-color: #ddd;
-  color: black;
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 90%;
+  padding: 3px;
+  background: #2196f3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+
+  /* Prevent double borders */
+  cursor: pointer;
 }
 
-#user-login a:hover {
-  background-color: #ddd;
-  color: black;
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#buy-footer {
+  color: white;
+  text-align: center;
+  background-color: rgba(0 0 0 / 45%);
+  margin-top: 5px;
 }
 
 .hidden {
@@ -243,13 +294,23 @@ span.recovery {
 }
 
 @keyframes fade-in {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fade-out {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .weather-status {
