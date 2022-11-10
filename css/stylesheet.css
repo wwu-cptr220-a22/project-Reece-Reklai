@@ -44,7 +44,7 @@ body {
 /* Responsive buy webpage */
 @media screen and (max-width: 992px) {
   #buy {
-    background-image: url("../img/palau-background/ocean.jpg");
+    background-image: url("../img/palau-background/sealife.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -305,12 +305,4 @@ form.example::after {
   background-color: #000;
   background-color: rgba(0 0 0 / 80%);
   color: white;
-}
-
-.carousel-control-prev {
-  background-color: rgba(0 0 0 / 80%);
-}
-
-.carousel-control-next {
-  background-color: rgba(0 0 0 / 80%);
 }

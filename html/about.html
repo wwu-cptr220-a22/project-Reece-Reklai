@@ -17,7 +17,7 @@
 <body id="about">
   <my-header> </my-header>
   <div id="body-container">
-    <main id="maincontent" class="palau-overview">
+    <main id="maincontent">
       <div class="flex flex-main">
         <div class="flex-about">
           <!-- Palau Real Estate Problem -->
@@ -53,7 +53,7 @@
           <div class="help-form">
             <h3 class="about-form-title">Question and Help</h3>
             <!-- Forms -->
-            <form class="" action="mailto:info@reece.reklai@wallawalla.edu" method="post">
+            <form id="contact-form" action="mailto:info@reece.reklai@wallawalla.edu" method="post">
               <label class="about-name" for="name">Name</label>
               <input type="text" id="name" value="">
               <br>
@@ -72,6 +72,35 @@
     </main>
   </div>
   <my-footer> </my-footer>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript">
+    document.querySelector('#contact-form').addEventListener('submit', event => {
+      event.preventDefault()
+      sendEmail()
+    })
+
+    function sendEmail() {
+      Email.send({
+        Host: 'smtp.gmail.com',
+        Username: 'PalauRealEstateWWU@gmail.com',
+        Password: '2229PalauWWU',
+        To: 'PalauRealEstateWWU@gmail.com',
+        From: 'PalauRealEstateWWU@gmail.com',
+        Subject: 'Email Submission ' + document.querySelector('#name').value + ' reply to ' + document.querySelector('#email').value,
+        Body: document.querySelector('#message-box').value,
+      })
+        .then(() => {
+          const submit = document.querySelector('#submit-button')
+          // adding event to let user know their form was submitted
+          submit.value = "Message Sent!"
+          setTimeout(() => { submit.value = "Submit" }, 5000)
+        })
+        .catch(er => {
+          console.log(er)
+        });
+    }
+
+  </script>
 </body>
 <script src="../js/header.js" type="text/javascript" defer></script>
 </html>
