@@ -13,13 +13,13 @@
   <link rel="stylesheet" href="../css/flex-style.css">
   <link rel="stylesheet" href="../css/listing-style.css">
 </head>
-<!-- Body -->
+
 
 <body id="buy">
-  <div class="topnav">
-    <h1 class="listings-buy-title">Listings</h1>
-    <a href="#buy-footer" class="split"><img src="../img/icons/arrowdownicon.png" alt="arrow-to-footer"></a>
-  </div>
+  <!-- Header -->
+  <my-header></my-header>
+  <h1 class="listings-buy-title">Listings</h1>
+  <a href="#buy-footer" class="split"><img src="../img/icons/arrowdownicon.png" alt="arrow-to-footer"></a>
   <!-- Return to Top Button -->
   <button onclick="topFunction()" id="top-button" title="Go to top">Top</button>
   <!-- main -->
@@ -205,10 +205,7 @@
     </main>
   </div>
   <!-- Footer -->
-  <footer id="buy-footer">
-    <h4>Author: Reece Reklai</h4>
-    <h4>Email: reece. reklai@wallawalla.edu</h4>
-  </footer>
+  <my-footer></my-footer>
   <!-- Scripts -->
   <script>
     // Script for a return button to the top of the webpage
@@ -277,6 +274,6 @@
     }
     window.initMap = initMap
   </script>
+  <script src="../js/header.js" type="text/javascript" defer></script>
 </body>
-
 </html>
