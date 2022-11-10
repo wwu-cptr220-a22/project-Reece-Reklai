@@ -1,9 +1,6 @@
 // header navbar
 class Header extends HTMLElement {
-  constructor () {
-    super()
-  }
-  connectedCallback () {
+  connectedCallback() {
     this.innerHTML = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <header class="main-navbar" aria-label="navigation links">
@@ -76,12 +73,9 @@ customElements.define('my-header', Header)
 
 // Footer info
 class Footer extends HTMLElement {
-  constructor () {
-    super()
-  }
-
-  connectedCallback () {
-    this.innerHTML = ` <footer id="buy-footer">
+  connectedCallback() {
+    this.innerHTML = ` 
+    <footer id="y-footer">
     <h5> © Copyright 2022</h5>
     <h5>Palau Real Estate </h5>
   </footer>`
