@@ -75,8 +75,8 @@ customElements.define('my-header', Header)
 class Footer extends HTMLElement {
   connectedCallback () {
     this.innerHTML = ` <footer id="buy-footer">
-    <h5> © Copyright 2022</h5>
-    <h5>Palau Real Estate </h5>
+    <h4> © Copyright 2022</h4>
+    <h4>Palau Real Estate </h4>
   </footer>`
   }
 }
