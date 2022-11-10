@@ -14,7 +14,7 @@ class Header extends HTMLElement {
             Real Estate</span>
             <div class="navbar-collapse justify-content-end" id="navbarsupportedcontent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item" id="search-bar" aria-current="search bar"> 
+                <li class="nav-item" id="search-bar"> 
                   <form class="example" action="action_page.php">
                     <input type="text" placeholder="Search.." name="search">
                   </form>
@@ -24,22 +24,22 @@ class Header extends HTMLElement {
                     <button type="submit"><i class="fa fa-search"></i></button>
                   </form>
                 </li>
-                <li class="nav-item" id="home-link" aria-current="home link">
+                <li class="nav-item" id="home-link">
                   <a class="nav-link active" href="index.html">Home</a>
                 </li>
-                <li class="nav-item" id="about-link" aria-current="about link">
+                <li class="nav-item" id="about-link">
                   <a class="nav-link active" href="about.html">About</a>
                 </li>
-                <li class="nav-item" id="buy-link" aria-current="buy link">
+                <li class="nav-item" id="buy-link">
                   <a class="nav-link active" href="buy.html">Buy</a>
                 </li>
-                <li class="nav-item" id="lease-link" aria-current="lease link">
-                  <a class="nav-link" href="#">Lease</a>
+                <li class="nav-item" id="lease-link">
+                  <a class="nav-link active" href="buy.html#rent">Lease</a>
                 </li>
-                <li class="nav-item" id="sell-link" aria-current="sell link">
+                <li class="nav-item" id="sell-link">
                   <a class="nav-link" href="#">Sell</a>
                 </li>
-                <li class="nav-item" id="user-login" aria-current="login">
+                <li class="nav-item" id="user-login">
                   <a class="nav-link active" role="button" href="#">Login</a>
                 </li>
               </ul>
