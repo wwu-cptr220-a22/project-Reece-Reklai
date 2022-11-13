@@ -78,18 +78,16 @@
       event.preventDefault()
       sendEmail()
     })
-
     function sendEmail() {
       Email.send({
-        Host: 'smtp.gmail.com',
-        Username: 'PalauRealEstateWWU@gmail.com',
-        Password: '2229PalauWWU',
+        SecureToken: "5b52722e-1196-4b73-9b5d-86718fac6991",
         To: 'PalauRealEstateWWU@gmail.com',
-        From: 'PalauRealEstateWWU@gmail.com',
-        Subject: 'Email Submission ' + document.querySelector('#name').value + ' reply to ' + document.querySelector('#email').value,
-        Body: document.querySelector('#message-box').value,
+        From: "PalauRealEstateWWU@gmail.com",
+        Subject: 'Email Submission (' + document.querySelector('#name').value + ')',
+        Body: 'Name: ' + document.querySelector('#name').value + ' | \r\n' + 'Email: ' + document.querySelector('#email').value + ' | \r\n' + document.querySelector('#message-box').value
       })
-        .then(() => {
+        .then((message) => {
+          // alert(message)
           const submit = document.querySelector('#submit-button')
           // adding event to let user know their form was submitted
           submit.value = "Message Sent!"
@@ -103,4 +101,5 @@
   </script>
 </body>
 <script src="../js/header.js" type="text/javascript" defer></script>
+
 </html>
