@@ -318,3 +318,8 @@ form.example::after {
   background-color: rgba(0 0 0 / 80%);
   color: white;
 }
+
+.copyright{
+  color: white;
+  text-align:center;
+}
