@@ -95,6 +95,9 @@
           const submit = document.querySelector('#submit-button')
           // adding event to let user know their form was submitted
           submit.value = "Message Sent!"
+          document.querySelector('#name').value = ''
+          document.querySelector('#email').value = ''
+          document.querySelector('#message-box').value = ''
           setTimeout(() => { submit.value = "Submit" }, 5000)
         })
         .catch(er => {
