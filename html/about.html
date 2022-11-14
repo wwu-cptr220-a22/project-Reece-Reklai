@@ -84,14 +84,14 @@
     function sendEmail() {
       // tutorial found on https://www.youtube.com/watch?v=MV-Aqkjju64&t
       Email.send({
-        SecureToken: "5b52722e-1196-4b73-9b5d-86718fac6991",
+        SecureToken: '5b52722e-1196-4b73-9b5d-86718fac6991',
         To: 'PalauRealEstateWWU@gmail.com',
-        From: "PalauRealEstateWWU@gmail.com",
+        From: 'PalauRealEstateWWU@gmail.com',
         Subject: 'Email Submission (' + document.querySelector('#name').value + ')',
         Body: 'Name: ' + document.querySelector('#name').value + '<br>' + 'Email: ' + document.querySelector('#email').value + '<br>' + document.querySelector('#message-box').value
       })
-        .then((message) => {
-          // alert(message)
+        .then(message => {
+          console.log('send status: ' + message)
           const submit = document.querySelector('#submit-button')
           // adding event to let user know their form was submitted
           submit.value = "Message Sent!"
@@ -104,4 +104,5 @@
   </script>
 </body>
 <script src="../js/header.js" type="text/javascript" defer></script>
+
 </html>
