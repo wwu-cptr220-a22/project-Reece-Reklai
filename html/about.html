@@ -70,37 +70,40 @@
         </div>
       </div>
     </main>
+    <footer class="copyright">
+      <p>© Copyright 2022 Palau Real Estate</p>
+    </footer>
   </div>
-  <my-footer> </my-footer>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script type="text/javascript">
-    document.querySelector('#contact-form').addEventListener('submit', event => {
-      event.preventDefault()
-      sendEmail()
-    })
-
-    function sendEmail() {
-      Email.send({
-        Host: 'smtp.gmail.com',
-        Username: 'PalauRealEstateWWU@gmail.com',
-        Password: '2229PalauWWU',
-        To: 'PalauRealEstateWWU@gmail.com',
-        From: 'PalauRealEstateWWU@gmail.com',
-        Subject: 'Email Submission ' + document.querySelector('#name').value + ' reply to ' + document.querySelector('#email').value,
-        Body: document.querySelector('#message-box').value,
-      })
-        .then(() => {
-          const submit = document.querySelector('#submit-button')
-          // adding event to let user know their form was submitted
-          submit.value = "Message Sent!"
-          setTimeout(() => { submit.value = "Submit" }, 5000)
-        })
-        .catch(er => {
-          console.log(er)
-        });
-    }
-
-  </script>
 </body>
-<script src="../js/header.js" type="text/javascript" defer></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script type="text/javascript">
+  document.querySelector('#contact-form').addEventListener('submit', event => {
+    event.preventDefault()
+    sendEmail()
+  })
+
+  function sendEmail() {
+    Email.send({
+      Host: 'smtp.gmail.com',
+      Username: 'PalauRealEstateWWU@gmail.com',
+      Password: '2229PalauWWU',
+      To: 'PalauRealEstateWWU@gmail.com',
+      From: 'PalauRealEstateWWU@gmail.com',
+      Subject: 'Email Submission ' + document.querySelector('#name').value + ' reply to ' + document.querySelector('#email').value,
+      Body: document.querySelector('#message-box').value,
+    })
+      .then(() => {
+        const submit = document.querySelector('#submit-button')
+        // adding event to let user know their form was submitted
+        submit.value = "Message Sent!"
+        setTimeout(() => { submit.value = "Submit" }, 5000)
+      })
+      .catch(er => {
+        console.log(er)
+      });
+  }
+
+</script>
+<script src="../js/header.js" defer></script>
+
 </html>
