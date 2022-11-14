@@ -84,7 +84,7 @@
     function sendEmail() {
       // tutorial found on https://www.youtube.com/watch?v=MV-Aqkjju64&t
       Email.send({
-        SecureToken: '5b52722e-1196-4b73-9b5d-86718fac6991',
+        SecureToken: '5b52722e-1196-4b73-9b5d-86718fac6991', // gitleaks:allow
         To: 'PalauRealEstateWWU@gmail.com',
         From: 'PalauRealEstateWWU@gmail.com',
         Subject: 'Email Submission (' + document.querySelector('#name').value + ')',
