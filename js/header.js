@@ -77,6 +77,7 @@ class Footer extends HTMLElement {
     this.innerHTML = ` <footer id="buy-footer">
     <h4> © Copyright 2022</h4>
     <h4>Palau Real Estate </h4>
+    <h5>Data from https://www.google.com/maps</h5>
   </footer>`
   }
 }
