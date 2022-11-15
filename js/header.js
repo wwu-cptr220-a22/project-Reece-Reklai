@@ -8,11 +8,11 @@ class Header extends HTMLElement {
     <span class="navbar-brand text-light mb-0 h1"><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house"> Palau
       Real Estate</span>
     <a class="nav-link active" id="user-login" role="button" href="#">Login</a>
-    <a class="nav-item" href="index.html">Home</a>
-    <a class="nav-item" href="about.html">About</a>
-    <a class="nav-item" href="buy.html">Buy</a>
     <a class="nav-item" href="buy.html">Sell</a>
     <a class="nav-item" href="buy.html">Lease</a>
+    <a class="nav-item" href="about.html">About</a>
+    <a class="nav-item" href="buy.html">Buy</a>
+    <a class="nav-item" href="index.html">Home</a>
     <div class="search-container" aria-label="Search bar">
       <form action="https://www.google.com/search">
         <input type="text" name="q" placeholder="Search.." name="search">
