@@ -3,13 +3,16 @@ class Header extends HTMLElement {
   connectedCallback () {
     this.innerHTML = `
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Header -->
-  <div class="topnav">
-    <span class="navbar-brand text-light mb-0 h1"><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house"> Palau
+  <div class="topnav" id="myTopnav">
+    <span class="navbar-brand text-light mb-1 h1"><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house"> Palau
       Real Estate</span>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
     <a class="nav-link active" id="user-login" role="button" href="#">Login</a>
     <a class="nav-item" href="buy.html">Sell</a>
-    <a class="nav-item" href="buy.html">Lease</a>
+    <a class="nav-item" href="buy.html#rent">Lease</a>
     <a class="nav-item" href="about.html">About</a>
     <a class="nav-item" href="buy.html">Buy</a>
     <a class="nav-item" href="index.html">Home</a>
@@ -43,7 +46,16 @@ class Header extends HTMLElement {
     </div>
   </section>
   <script src="../js/header.js" type="text/javascript" defer></script>
-
+  <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
     `
   }
 }
