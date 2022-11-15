@@ -5,7 +5,7 @@ class Header extends HTMLElement {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Header -->
   <div class="topnav">
-    <span class="navbar-brand mb-0 h1"><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house"> Palau
+    <span class="navbar-brand text-light mb-0 h1"><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house"> Palau
       Real Estate</span>
     <a class="nav-link active" id="user-login" role="button" href="#">Login</a>
     <a class="nav-item" href="index.html">Home</a>
