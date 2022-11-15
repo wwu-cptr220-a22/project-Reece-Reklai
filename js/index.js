@@ -1,5 +1,5 @@
 // Initialize and add the map (Buy Page)
-function initMap() {
+function initMap () {
   // The location of Palau
   // const palau = { lat: 7.53644, lng: 134.58159 }
   let position // declared for each map based on hidden div for lat and lng

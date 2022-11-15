@@ -15,7 +15,7 @@ body {
 .topnav a {
   float: right;
   display: block;
-  color: rgb(255, 255, 255);
+  color: #ddd;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -35,10 +35,9 @@ body {
 
 .topnav .search-container {
   float: right;
-
 }
 
-.topnav .search-container input[type=text] {
+.topnav .search-container input[type="text"] {
   padding: 8px;
   margin-top: 8px;
   font-size: 17px;
@@ -53,7 +52,7 @@ body {
   padding: 5px;
   margin-top: 20px;
   margin-right: 8px;
-  background: rgb(254, 31, 31);
+  background: #fe2929;
   font-size: 15px;
   display: inline-block;
   height: 30px;
@@ -61,7 +60,7 @@ body {
 }
 
 .topnav .search-container button:hover {
-  background: rgb(208, 208, 208);
+  background: #ddd;
 }
 
 @media screen and (max-width: 600px) {
@@ -70,7 +69,7 @@ body {
   }
 
   .topnav a,
-  .topnav input[type=text],
+  .topnav input[type="text"],
   .topnav .search-container button {
     float: none;
     display: block;
@@ -80,7 +79,7 @@ body {
     padding: 4px;
   }
 
-  .topnav input[type=text] {
-    border: 1px solid rgb(163, 40, 40);
+  .topnav input[type="text"] {
+    border: 1px solid #ddd;
   }
 }
