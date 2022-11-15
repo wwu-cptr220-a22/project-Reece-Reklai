@@ -56,6 +56,13 @@ body {
   }
 }
 
+#buy-footer {
+  color: white;
+  text-align: center;
+  background-color: rgba(0 0 0 / 45%);
+  margin-top: 5px;
+}
+
 /* Full-width input fields */
 #index-username,
 #index-password {
