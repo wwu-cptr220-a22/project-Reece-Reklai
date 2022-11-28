@@ -52,14 +52,17 @@ describe('Home Page Tests', () => {
     expect(fs.existsSync(homePagePath))
   })
 
-  // test('Home page has header', () => {
-  //   // Read details from home page file
-  //   const homePage = fs.readFileSync(homePagePath, 'utf-8')
-  //   // load the HTML into the tester
-  //   document.documentElement.innerHTML = homePage
-  //   // expect(document.querySelector('my-header')).not.toEqual(null)
+  // Read details from home page file
+  const homePage = fs.readFileSync(homePagePath, 'utf-8')
+  // load the HTML into the tester
+  document.documentElement.innerHTML = homePage
 
+  // test('Home page has header', () => {
+  //   // expect(document.querySelector('my-header')).not.toEqual(null)
   // })
+  test('Home page loads weather info', () => {
+    expect(document.querySelector('.weather').innerHTML).not.toEqual(null)
+  })
 })
 
 describe('About Page Tests', () => {
