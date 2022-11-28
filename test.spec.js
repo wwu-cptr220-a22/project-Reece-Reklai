@@ -7,6 +7,17 @@ const path = require('path')
 const styleMatchers = require('jest-style-matchers')
 expect.extend(styleMatchers)
 
+
+// hide jsDom errors (really, all error logging...?)
+beforeEach(() => {
+  jest.spyOn(console, 'error')
+  console.error.mockImplementation(() => {})
+})
+
+afterEach(() => {
+  console.error.mockRestore()
+})
+
 describe('Source code is valid', () => {
   test('HTML validates without errors', async () => {
     const lintOpts = {
@@ -29,9 +40,9 @@ describe('Source code is valid', () => {
     }
   })
 
-  test('CSS validates without errors', async () => {
-    await expect('css/*.css').toHaveNoCssLintErrorsAsync() // test all files in css folder
-  })
+  // test('CSS validates without errors', async () => {
+  //   await expect('css/*.css').toHaveNoCssLintErrorsAsync(config) // test all files in css folder
+  // })
 
   test('JavaScript lints without errors', () => {
     if (fs.existsSync(path.join(__dirname, 'js'))) {

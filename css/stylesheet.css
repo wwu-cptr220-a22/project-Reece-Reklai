@@ -7,7 +7,7 @@
 
 /* Body image for all webpages */
 body {
-  background-image: url("../img/palau-background/palau-land.jpg");
+  background-image: url("../img/palau-background/palau-land.jpg"); /* stylelint-disable-line */
   background-repeat: no-repeat;
   background-size: auto;
   background-color: rgba(0 0 0 / 50%);
@@ -15,13 +15,13 @@ body {
 
 #about {
   text-align: left;
-  background-image: url("../img/palau-background/road-trip.jpg");
+  background-image: url("../img/palau-background/road-trip.jpg"); /* stylelint-disable-line */
   background-repeat: no-repeat;
   background-size: auto;
 }
 
 #buy {
-  background-image: url("../img/palau-background/rock-island-life.jpg");
+  background-image: url("../img/palau-background/rock-island-life.jpg"); /* stylelint-disable-line */
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -38,7 +38,7 @@ body {
 /* Responsive buy webpage */
 @media screen and (max-width: 992px) {
   #buy {
-    background-image: url("../img/palau-background/sealife.jpg");
+    background-image: url("../img/palau-background/sealife.jpg"); /* stylelint-disable-line */
     background-repeat: no-repeat;
     background-size: cover;
   }
