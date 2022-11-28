@@ -64,6 +64,10 @@ describe('Home Page Tests', () => {
     expect(document.querySelector('.weather').innerHTML).not.toEqual(null)
   })
 })
+// This makes the css linter mad but the other thing work.
+//   "jest": {
+//     "testEnvironment": "jsdom"
+//   }
 
 describe('About Page Tests', () => {
   // looking at files in html folder
@@ -72,7 +76,6 @@ describe('About Page Tests', () => {
   test('File exists', () => {
     expect(fs.existsSync(aboutPagePath))
   })
-
 })
 
 describe('Buy Page Tests', () => {
@@ -82,5 +85,4 @@ describe('Buy Page Tests', () => {
   test('File exists', () => {
     expect(fs.existsSync(buyPagePath))
   })
-
 })
