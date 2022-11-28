@@ -6,22 +6,20 @@ class Header extends HTMLElement {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Header -->
   <div class="topnav" id="myTopnav">
-    <span class="navbar-brand text-light mb-1 h1"><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house"> Palau
+    <span class="navbar-brand"><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house"> Palau
       Real Estate</span>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
     <a class="nav-link active" id="user-login" role="button" href="#">Login</a>
-    <a class="nav-item" href="buy.html">Sell</a>
-    <a class="nav-item" href="buy.html#rent">Lease</a>
-    <a class="nav-item" href="about.html">About</a>
-    <a class="nav-item" href="buy.html">Buy</a>
-    <a class="nav-item" href="index.html">Home</a>
-    <div class="search-container" aria-label="Search bar">
-      <form action="https://www.google.com/search">
-        <input type="text" name="q" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
+    <a class="nav-link" href="buy.html">Sell</a>
+    <a class="nav-link" href="buy.html#rent">Lease</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link" href="buy.html">Buy</a>
+    <a class="nav-link" href="index.html">Home</a>
+    <form class="search-container" aria-label="Search bar"action="https://www.google.com/search">
+      <input type="text" name="q" placeholder="Search.." name="search">
+      <button id="search-button" type="submit"><i class="fa fa-search"></i></button>
+    </form>
   </div>
   <!-- Login Button -->
   <section class="login" aria-label="login box">
