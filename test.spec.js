@@ -1,5 +1,7 @@
 const fs = require('fs')
 const path = require('path')
+// TODO: figure out why Jest doesn't like the scripts here
+// require('./js/header.js')
 
 // include custom matchers
 const styleMatchers = require('jest-style-matchers')
@@ -40,4 +42,42 @@ describe('Source code is valid', () => {
       }
     }
   })
+})
+
+describe('Home Page Tests', () => {
+  // looking at files in html folder
+  const homePagePath = path.join(__dirname, 'html', 'index.html')
+
+  test('File exists', () => {
+    expect(fs.existsSync(homePagePath))
+  })
+
+  // test('Home page has header', () => {
+  //   // Read details from home page file
+  //   const homePage = fs.readFileSync(homePagePath, 'utf-8')
+  //   // load the HTML into the tester
+  //   document.documentElement.innerHTML = homePage
+  //   // expect(document.querySelector('my-header')).not.toEqual(null)
+
+  // })
+})
+
+describe('About Page Tests', () => {
+  // looking at files in html folder
+  const aboutPagePath = path.join(__dirname, 'html', 'about.html')
+
+  test('File exists', () => {
+    expect(fs.existsSync(aboutPagePath))
+  })
+
+})
+
+describe('Buy Page Tests', () => {
+  // looking at files in html folder
+  const buyPagePath = path.join(__dirname, 'html', 'buy.html')
+
+  test('File exists', () => {
+    expect(fs.existsSync(buyPagePath))
+  })
+
 })
