@@ -7,7 +7,6 @@ const path = require('path')
 const styleMatchers = require('jest-style-matchers')
 expect.extend(styleMatchers)
 
-
 // hide jsDom errors (really, all error logging...?)
 beforeEach(() => {
   jest.spyOn(console, 'error')
