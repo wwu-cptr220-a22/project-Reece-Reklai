@@ -99,10 +99,10 @@ body {
     font-size: larger;
   }
 
-  .topnav .search-container input[type="text"], 
+  .topnav .search-container input[type="text"],
   #search-button {
     width: 100%;
     padding: 4px;
     margin: 4px 0;
   }
-} 
+}
