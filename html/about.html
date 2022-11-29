@@ -107,6 +107,11 @@
           console.log(er)
         });
     }
+    // Make functions and variables available to tester. 
+    if (typeof module !== 'undefined' && module.exports) {
+      if (typeof sendEmail !== 'undefined')
+        module.exports.sendEmail = toggleSpinner;
+    }
   </script>
 </body>
 <script src="../js/header.js" type="text/javascript" defer></script>

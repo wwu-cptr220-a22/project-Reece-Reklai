@@ -10,7 +10,7 @@ expect.extend(styleMatchers)
 // hide jsDom errors (really, all error logging...?)
 beforeEach(() => {
   jest.spyOn(console, 'error')
-  console.error.mockImplementation(() => {})
+  console.error.mockImplementation(() => { })
 })
 
 afterEach(() => {
@@ -55,36 +55,52 @@ describe('Source code is valid', () => {
 })
 
 describe('Home Page Tests', () => {
-  // looking at files in html folder
-  const homePagePath = path.join(__dirname, 'html', 'index.html')
-
   test('File exists', () => {
-    expect(fs.existsSync(homePagePath))
+    expect(fs.existsSync(path.join(__dirname, 'html', 'index.html')))
   })
-
-  // Read details from home page file
-  const homePage = fs.readFileSync(homePagePath, 'utf-8')
-  // load the HTML into the tester
-  document.documentElement.innerHTML = homePage
 
   // test('Home page has header', () => {
   //   // expect(document.querySelector('my-header')).not.toEqual(null)
   // })
   test('Home page loads weather info', () => {
-    expect(document.querySelector('.weather').innerHTML).not.toEqual(null)
+    loadHomeIntoDOM()
+    expect(document.querySelector('.weather').innerHTML).not.toEqual("")
   })
 })
-// This makes the css linter mad but the other thing work.
-//   "jest": {
-//     "testEnvironment": "jsdom"
-//   }
+
+let source
+
+function loadHomeIntoDOM() {
+  // looking at files in html folder
+  const homePagePath = path.join(__dirname, 'html', 'index.html')
+  // Read details from home page file
+  const homePage = fs.readFileSync(homePagePath, 'utf-8')
+  // load the HTML into the tester
+  document.documentElement.innerHTML = homePage
+}
+
+function loadAboutIntoDOM() {
+  const aboutPagePath = path.join(__dirname, 'html', 'about.html')
+  source = require(aboutPagePath)
+  // Read details from home page file
+  const aboutPage = fs.readFileSync(aboutPagePath, 'utf-8')
+  // load the HTML into the tester
+  document.documentElement.innerHTML = aboutPage
+}
+
 
 describe('About Page Tests', () => {
-  // looking at files in html folder
-  const aboutPagePath = path.join(__dirname, 'html', 'about.html')
 
   test('File exists', () => {
-    expect(fs.existsSync(aboutPagePath))
+    expect(fs.existsSync(path.join(__dirname, 'html', 'about.html')))
+  })
+
+  test('Button starts out with submit', () => {
+    loadAboutIntoDOM()
+    const submitButton = document.querySelector('#submit-button');
+    source.sendEmail()
+    expect(submitButton.value).toEqual("Message Sent!")
+
   })
 })
 
