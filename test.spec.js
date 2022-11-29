@@ -98,9 +98,8 @@ describe('About Page Tests', () => {
   test('Button starts out with submit', () => {
     loadAboutIntoDOM()
     const submitButton = document.querySelector('#submit-button');
-    source.sendEmail()
+    // submitButton.click()
     expect(submitButton.value).toEqual("Message Sent!")
-
   })
 })
 
