@@ -1,0 +1,51 @@
+#body-container {
+  background-color: rgba(0 0 0 / 60%);
+  margin-top: 50px;
+}
+
+.flex-main {
+  height: 100%;
+}
+
+.flex-about {
+  flex: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+input {
+  width: 70%;
+}
+
+#message-box,
+#submit-button {
+  width: 90%;
+}
+
+/* on 768px OR LARGER displays */
+@media (min-width: 768px) {
+  .flex-main {
+    flex-direction: row;
+  }
+}
+
+/* Form Text Color */
+.about-form-title,
+.about-name,
+.about-email,
+.about-message {
+  color: whitesmoke;
+}
+
+/* Information about the web application */
+.palau-problem {
+  color: whitesmoke;
+}
+
+.project-purpose {
+  color: whitesmoke;
+}
+
+.about-email {
+  padding-right: 4.5px;
+}
