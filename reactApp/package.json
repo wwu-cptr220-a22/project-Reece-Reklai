@@ -1,5 +1,5 @@
 {
-  "name": "problem-adoption",
+  "name": "problem-adoption-routes",
   "version": "0.2.4",
   "private": true,
   "dependencies": {
@@ -9,7 +9,9 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "5.0.1",
+    "reactstrap": "^9.1.5"
   },
   "scripts": {
     "start": "react-scripts start",

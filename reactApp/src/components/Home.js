@@ -1,5 +1,4 @@
 import React, { Component } from "react"; // import React Component
-import _ from "lodash";
 import "../css/stylesheet.css";
 
 class Home extends Component {
