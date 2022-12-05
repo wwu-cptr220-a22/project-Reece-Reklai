@@ -3,6 +3,10 @@ import "../css/stylesheet.css";
 import "../css/about-style.css";
 
 class About extends Component {
+  constructor(props) {
+    super(props);
+    this.mailService = "https://smtpjs.com/v3/smtp.js";
+  }
   HandleSubmit = () => {
 
   }
