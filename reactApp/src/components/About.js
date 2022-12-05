@@ -1,5 +1,6 @@
 import React, { Component } from "react"; // import React Component
 import "../css/stylesheet.css";
+import "../css/about-style.css";
 
 class About extends Component {
   HandleSubmit = () => {

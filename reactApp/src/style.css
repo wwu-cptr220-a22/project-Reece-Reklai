@@ -1,22 +1,470 @@
-/* Include custom colors and sizing */
+/* Favicon */
+#favicon {
+  width: 50px;
+  height: 50px;
+  margin-right: 25px;
+}
 
-header.jumbotron {
-  background-color: #2d708d;
+/* Body image for all webpages */
+body {
+  background-image: url("./img/palau-background/palau-land.jpg"); /* stylelint-disable-line */
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: rgba(0 0 0 / 50%);
+}
+
+#about {
+  text-align: left;
+  background-image: url("./img/palau-background/road-trip.jpg"); /* stylelint-disable-line */
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+#buy {
+  background-image: url("./img/palau-background/rock-island-life.jpg"); /* stylelint-disable-line */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Listing title in buy webpage */
+.listings-buy-title {
+  display: inline-block;
+  position: relative;
+  left: 45%;
+  color: whitesmoke;
+}
+
+/* Responsive buy webpage */
+@media screen and (max-width: 992px) {
+  #buy {
+    background-image: url("./img/palau-background/sealife.jpg"); /* stylelint-disable-line */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 295px) {
+  .listings-buy-title {
+    left: 0%;
+  }
+}
+
+/* Full-width input fields for login */
+#index-username,
+#index-password {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #333;
+  color: rgb(255 255 255);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Hover for all buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Padding for the form container located in the index */
+.index-form-content {
+  padding: 16px;
+}
+
+/* The recovery text on the form container located in the index */
+span.recovery {
+  white-space: normal;
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0 0 0);
+  background-color: rgba(0 0 0 / 70%);
+  padding-top: 100px;
+}
+
+/* Login Content Box Container */
+.login-content {
+  background-color: #fefefe;
+  margin: 5% auto 15%;
+  width: 80%;
+}
+
+/* Add Zoom Animation */
+.animate {
+  animation: animatezoom 0.6s;
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 400px) {
+  span.recovery {
+    display: block;
+    float: none;
+  }
+
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 447px) {
+  .split {
+    display: none;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* Carousel */
+#carousel {
+  margin-top: 750px;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.weather-status {
+  background-color: #000;
+  background-color: rgba(0 0 0 / 80%);
   color: white;
 }
 
-nav {
+.copyright {
+  color: white;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+#body-container {
+  background-color: #ffffffb0;
+  box-sizing: border-box;
+  margin: 0.5rem;
+}
+
+#maincontent {
+  padding: 1%;
+  flex: 1;
+  display: flex;
+}
+
+.flex {
+  display: flex;
+  height: 100%;
+}
+
+.flex-main {
+  flex-direction: column;
+  width: 100%;
+}
+
+.flex-item {
+  /* display: flexbox; */
+  padding: 0.5em;
+}
+
+/* on 598px OR LARGER displays */
+@media (min-width: 598px) {
+  #body-container {
+    margin: 0.5rem;
+  }
+}
+
+/* on 768px OR LARGER displays */
+@media (min-width: 768px) {
+  #body-container {
+    margin: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+/* on 992px OR LARGER displays */
+@media (min-width: 992px) {
+  #body-container {
+    margin: 3rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #body-container {
+    margin: 5rem;
+    margin-top: 1rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #404040;
+  padding: 5px 8px;
+}
+
+.nav-link, NavLink {
+  float: right;
+  display: block;
+  color: #ddd;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-top: 4px;
+}
+
+.nav-link:hover, NavLink:hover {
   background-color: #ddd;
-  margin-bottom: 2em;
-  padding: 1em;
+  color: black;
 }
 
-nav h2 {
-  font-size: 1.25rem;
+.nav-link.active, NavLink:active {
+  background-color: #2196f3;
+  color: white;
 }
 
-/* keep images in check */
-.card-deck .card {
-  flex-basis: 200px;
-  margin-bottom: 30px;
+.topnav .search-container {
+  float: right;
+}
+
+.topnav .search-container input[type="text"] {
+  padding: 4px;
+  margin: 4px 0;
+  font-size: 17px;
+  border: none;
+  background-color: #d8d8d8;
+  display: inline-block;
+  height: 30px;
+  width: 200px;
+}
+
+#search-button {
+  padding: 5px;
+  margin-top: 20px;
+  margin-right: 8px;
+  background: #2196f3;
+  font-size: 15px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+#search-button:hover {
+  background: #ddd;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.skip-nav-link {
+  background: black;
+  position: absolute;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  left: 0.5rem;
+  transform: translateY(-120%);
+  transition: transform 325ms ease-in;
+}
+
+.skip-nav-link:focus {
+  transform: translateY(0);
+}
+
+.navbar-brand {
+  color: white;
+  padding-left: 2px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 500px) {
+  .nav-link,
+  NavLink,
+  .search-container {
+    float: none;
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+    vertical-align: middle;
+    font-size: larger;
+  }
+
+  .topnav .search-container input[type="text"],
+  #search-button {
+    width: 100%;
+    padding: 4px;
+    margin: 4px 0;
+  }
+}
+
+.post {
+  margin-top: 1rem;
+  background-color: #ffffffb2;
+}
+
+.map {
+  background-color: #195cc1;
+  height: 150px;
+  width: auto;
+  justify-content: right;
+  margin-left: 0.5rem;
+}
+
+/* Incidental Styling */
+
+.listing-photo {
+  width: auto;
+  max-height: 250px;
+  padding: 0;
+  margin: 0;
+}
+
+/* animations */
+.listing-photo:hover {
+  transition: all 0.2s ease-out;
+  box-shadow: 4px 4px 5px black;
+}
+
+.image-panel {
+  display: none;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+}
+
+/* Google Maps */
+.google-maps {
+  width: 65%;
+  max-height: 250px;
+  padding: 0;
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
+/* on 598px OR LARGER displays */
+@media (min-width: 598px) {
+  .image-panel {
+    display: flex;
+  }
+
+  .map-link {
+    display: none;
+  }
+}
+
+/* on 992px OR LARGER displays */
+@media (min-width: 992px) {
+  .map {
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .map {
+    margin-left: 3rem;
+  }
+}
+
+#top-button {
+  display: none;
+  width: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Return to Top Button */
+#top-button:hover {
+  background-color: cadetblue;
+}
+
+#buy-footer {
+  color: white;
+  text-align: center;
+  background-color: rgba(0 0 0 / 45%);
+  margin-top: 5px;
 }
