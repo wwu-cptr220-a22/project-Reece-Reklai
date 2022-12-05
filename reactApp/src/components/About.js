@@ -2,9 +2,12 @@ import React, { Component } from "react"; // import React Component
 import "../css/stylesheet.css";
 
 class About extends Component {
+  HandleSubmit = () => {
+
+  }
   render() {
     return (
-      <div>
+      <div id="About">
         <div class="flex flex-main">
           <div class="flex-about">
             <div class="palau-problem">
@@ -32,6 +35,24 @@ class About extends Component {
                 of the real estate market and create another source of cash flow in
                 Palau
               </p>
+            </div>
+          </div>
+          <div class="flex-about">
+            <div class="help-form">
+              <h3 class="about-form-title">Question and Help</h3>
+              <form id="contact-form" onSubmit={this.HandleSubmit}>
+                <label class="about-name" for="name">Name</label>
+                <input type="text" id="name" value="" />
+                <br />
+                <label class="about-email" for="email">Email</label>
+                <input type="email" id="email" value="" />
+                <br />
+                <label class="about-message" for="message-box">Message</label>
+                <br />
+                <textarea name="name" id="message-box" rows="10" cols="30"></textarea>
+                <br />
+                <input type="submit" id="submit-button" name="final-message" />
+              </form>
             </div>
           </div>
         </div>
