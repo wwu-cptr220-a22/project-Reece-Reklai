@@ -43,7 +43,7 @@ class Home extends Component {
             data-bs-ride="carousel"
           >
             <div className="carousel-inner">
-              <div className="carousel-item active" data-bs-interval="2000">
+              <div className="carousel-item active" data-bs-interval="7500">
                 <img
                   src="../img/palau-background/resort.jpg"
                   className="d-block w-100"
@@ -62,7 +62,7 @@ class Home extends Component {
                   </div>
                 </div>
               </div>
-              <div className="carousel-item" data-bs-interval="2000">
+              <div className="carousel-item" data-bs-interval="7500">
                 <img
                   src="../img/palau-background/palau-beach.jpg"
                   className="d-block w-100"
@@ -81,7 +81,7 @@ class Home extends Component {
                   </div>
                 </div>
               </div>
-              <div className="carousel-item" data-bs-interval="2000">
+              <div className="carousel-item" data-bs-interval="7500">
                 <img
                   src="../img/palau-background/ocean.jpg"
                   className="d-block w-100"
