@@ -6,7 +6,7 @@
 }
 
 /* Body image for all webpages */
-body {
+#home-page {
   background-image: url("../img/palau-background/palau-land.jpg"); /* stylelint-disable-line */
   background-repeat: no-repeat;
   background-size: auto;

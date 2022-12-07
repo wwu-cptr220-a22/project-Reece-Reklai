@@ -1,20 +1,24 @@
 import React, { Component } from "react"; // import React Component
 import { NavLink } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
 
 export class Header extends Component {
     handleClick = () => {
-        //TODO
-        this.props.iconClick();
+        console.log("Clicked icon!")
+        // this.props.iconClick();
+    }
+    showPopup = () => {
+        //TODO: get this working
+        return <LoginPopup/>
     }
     render() {
 
         return (
             <div>
                 <div className="topnav" id="myTopnav">
-                    <span className="navbar-brand"><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house" /> Palau
+                    <span className="navbar-brand" onClick={this.handleClick}><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house" /> Palau
                         Real Estate</span>
-                    <button className="icon" onClick={this.handleClick} />
-                    <i className="fa fa-bars"></i>
+
                     <nav id='about-links'>
                         <ul>
                             <li className="nav-link"><NavLink to='/login' className={(navData) => navData.isActive ? 'active-link' : ''}>Login</NavLink></li>
@@ -25,7 +29,9 @@ export class Header extends Component {
                     </nav>
                     <form className="search-container" aria-label="Search bar" action="https://www.google.com/search">
                         <input type="text" placeholder="Search.." name="search" />
-                        <button id="search-button" type="submit"><i className="fa fa-search"></i></button>
+                        <button id="search-button" type="submit">
+                            <FaSearch />
+                        </button>
                     </form>
                 </div>
                 {/* <LoginPopup/> */}

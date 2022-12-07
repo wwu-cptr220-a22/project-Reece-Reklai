@@ -12,12 +12,21 @@ import { Route, Routes, Navigate } from 'react-router-dom'
 import { Header, Footer } from './components/GeneralDetails'
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {pageID: "home-page"}; 
+    // TODO: update pageID on navigate to set background
+    // #home-page
+    // #about 
+    // #buy
+  }
+
   render() {
     return (
-      <div>
+      <div id={this.state.pageID}>
         <Header />
         <Routes>
-          <Route path='/' element={<Home className="home-page"/>} />
+          <Route path='/' element={<Home />} />
           <Route path='/listings' element={<Listings />} />
           <Route path='/about' element={<About />} />
           <Route path='*' element={<Navigate to='/' replace />} />
