@@ -1,7 +1,5 @@
 import React, { Component } from "react"; // import React Component
 import { Email } from "https://smtpjs.com/v3/smtp.js";
-import "../css/stylesheet.css";
-import "../css/about-style.css";
 
 // https://reactgo.com/react-get-input-value/
 

@@ -1,5 +1,9 @@
 import React, { Component } from 'react' // import React Component
-import './style.css'
+import './css/stylesheet.css'
+import './css/navbar.css'
+import './css/flex-style.css'
+import './css/listing-style.css'
+import './css/about-style.css'
 // import _ from 'lodash'
 import Home from './components/Home'
 import Listings from './components/Listings'
