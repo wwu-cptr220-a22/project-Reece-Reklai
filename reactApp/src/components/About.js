@@ -45,9 +45,9 @@ class About extends Component {
   render() {
     return (
       <div id="About">
-        <div class="flex flex-main">
-          <div class="flex-about">
-            <div class="palau-problem">
+        <div className="flex flex-main">
+          <div className="flex-about">
+            <div className="palau-problem">
               <h1>Palau's Real Estate Problem</h1>
               <p>
                 In Palau, many people own a plot of land. In most cases, it is
@@ -64,7 +64,7 @@ class About extends Component {
                 handled for you!
               </p>
             </div>
-            <div class="project-purpose">
+            <div className="project-purpose">
               <h2>Why Real Estate Palau?</h2>
               <p>
                 Palau real estate web application's purpose is to allow Palauans to
@@ -74,17 +74,17 @@ class About extends Component {
               </p>
             </div>
           </div>
-          <div class="flex-about">
-            <div class="help-form">
-              <h3 class="about-form-title">Question and Help</h3>
+          <div className="flex-about">
+            <div className="help-form">
+              <h3 className="about-form-title">Question and Help</h3>
               <form id="contact-form" onSubmit={this.HandleSubmit}>
-                <label class="about-name" for="name">Name</label>
+                <label className="about-name" htmlFor="name">Name</label>
                 <input type="text" id="name" onChange={this.handleName} value={this.state.name} />
                 <br />
-                <label class="about-email" for="email">Email</label>
+                <label className="about-email" htmlFor="email">Email</label>
                 <input type="email" id="email" onChange={this.handleEmail} value={this.state.email} />
                 <br />
-                <label class="about-message" for="message-box">Message</label>
+                <label className="about-message" htmlFor="message-box">Message</label>
                 <br />
                 <textarea name="name" id="message-box" rows="10" cols="30" onChange={this.handleMessage} value={this.state.message}></textarea>
                 <br />

@@ -13,7 +13,7 @@ class App extends Component {
       <div>
         <Header />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<Home className="home-page"/>} />
           <Route path='/listings' element={<Listings />} />
           <Route path='/about' element={<About />} />
           <Route path='*' element={<Navigate to='/' replace />} />
