@@ -9,7 +9,7 @@ export class Header extends Component {
     }
     showPopup = () => {
         //TODO: get this working
-        return <LoginPopup/>
+        return <LoginPopup />
     }
     render() {
 
@@ -18,21 +18,22 @@ export class Header extends Component {
                 <div className="topnav" id="myTopnav">
                     <span className="navbar-brand" onClick={this.handleClick}><img id="favicon" src="../img/icons/palauicon.jpg" alt="palau-house" /> Palau
                         Real Estate</span>
-
-                    <nav id='about-links'>
-                        <ul>
-                            <li className="nav-link"><NavLink to='/login' className={(navData) => navData.isActive ? 'active-link' : ''}>Login</NavLink></li>
-                            <li className="nav-link"><NavLink to='/' className={(navData) => navData.isActive ? 'active-link' : ''}>Home</NavLink></li>
-                            <li className="nav-link"><NavLink to='/about' className={(navData) => navData.isActive ? 'active-link' : ''}>About</NavLink></li>
-                            <li className="nav-link"><NavLink to='/listings' className={(navData) => navData.isActive ? 'active-link' : ''}>Buy/Rent</NavLink></li>
-                        </ul>
-                    </nav>
-                    <form className="search-container" aria-label="Search bar" action="https://www.google.com/search">
-                        <input type="text" placeholder="Search.." name="search" />
-                        <button id="search-button" type="submit">
-                            <FaSearch />
-                        </button>
-                    </form>
+                    <span>
+                        <nav id='about-links'>
+                            <ul>
+                                <li className="nav-link"><NavLink to='/login' className={(navData) => navData.isActive ? 'active-link' : ''}>Login</NavLink></li>
+                                <li className="nav-link"><NavLink to='/' className={(navData) => navData.isActive ? 'active-link' : ''}>Home</NavLink></li>
+                                <li className="nav-link"><NavLink to='/about' className={(navData) => navData.isActive ? 'active-link' : ''}>About</NavLink></li>
+                                <li className="nav-link"><NavLink to='/listings' className={(navData) => navData.isActive ? 'active-link' : ''}>Buy/Rent</NavLink></li>
+                            </ul>
+                        </nav>
+                        <form className="search-container" aria-label="Search bar" action="https://www.google.com/search">
+                            <input type="text" placeholder="Search.." name="search" />
+                            <button id="search-button" type="submit">
+                                <FaSearch />
+                            </button>
+                        </form>
+                    </span>
                 </div>
                 {/* <LoginPopup/> */}
             </div>
