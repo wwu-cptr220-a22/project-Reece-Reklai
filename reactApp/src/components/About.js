@@ -12,6 +12,7 @@ class About extends Component {
 
   handleName = event => {
     this.setState({ name: event.target.value });
+    console.log(this.state.name)
   }
   handleEmail = event => {
     this.setState({ email: event.target.value });
@@ -22,6 +23,7 @@ class About extends Component {
 
   HandleSubmit = () => {
     // tutorial found on https://www.youtube.com/watch?v=MV-Aqkjju64&t
+    console.log("Running Email Submission")
     Email.send({
       SecureToken: '5b52722e-1196-4b73-9b5d-86718fac6991', // gitleaks:allow
       To: 'PalauRealEstateWWU@gmail.com',
@@ -33,7 +35,7 @@ class About extends Component {
         console.log('send status: ' + message)
         // adding event to let user know their form was submitted
         this.setState({ name: "", email: "", message: "", submitMessage: "Message Sent!" });
-        setTimeout(() => { this.setState({submitMessage:"Submit"}) }, 5000)
+        setTimeout(() => { this.setState({ submitMessage: "Submit" }) }, 5000)
       })
       .catch(er => {
         console.log(er)
