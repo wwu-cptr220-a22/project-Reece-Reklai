@@ -43,7 +43,7 @@ class About extends Component {
   render() {
     return (
       <div id="About">
-        <div className="flex flex-main">
+        <div id="maincontent" className="flex flex-main">
           <div className="flex-about">
             <div className="palau-problem">
               <h1>Palau's Real Estate Problem</h1>

@@ -1,4 +1,10 @@
+/* Make images go to bottome of page */
+body, #root, html {
+  height: 100%;
+}
+
 /* Body image for all webpages */
+
 #home-page {
   background-image: url("../img/palau-background/palau-land.jpg"); /* stylelint-disable-line */
   background-repeat: no-repeat;
@@ -11,6 +17,7 @@
   background-image: url("../img/palau-background/road-trip.jpg"); /* stylelint-disable-line */
   background-repeat: no-repeat;
   background-size: auto;
+  height: 100%;
 }
 
 #buy {
