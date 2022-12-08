@@ -96,6 +96,10 @@
   display: inline-block;
 }
 
+#cancel-bar {
+  background-color:#c5c5c54d
+}
+
 /* Favicon */
 #favicon {
   width: 50px;

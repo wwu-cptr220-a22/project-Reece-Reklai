@@ -9,7 +9,7 @@ import Home from './components/Home'
 import Listings from './components/Listings'
 import About from './components/About'
 import { Route, Routes, Navigate } from 'react-router-dom'
-import { Header, Footer } from './components/GeneralDetails'
+import { Header, Footer, LoginPopup } from './components/GeneralDetails'
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +29,7 @@ class App extends Component {
           <Route path='/' element={<Home />} />
           <Route path='/listings' element={<Listings />} />
           <Route path='/about' element={<About />} />
+          <Route path='/login' element={<LoginPopup />} />
           <Route path='*' element={<Navigate to='/' replace />} />
         </Routes>
         <Footer />
