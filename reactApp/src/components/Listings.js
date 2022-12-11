@@ -1,12 +1,11 @@
-import React, { Component } from "react"; // import React Component
+import React, { Component } from 'react' // import React Component
 
 class Listings extends Component {
-  render() {
+  render () {
     return (
-      <div>
+      <div />
+    )
+  }
+}
 
-      </div>
-    );
-  }}
-
-export default Listings;
+export default Listings

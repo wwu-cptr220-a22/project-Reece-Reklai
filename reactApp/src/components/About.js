@@ -1,53 +1,13 @@
-import React, { Component } from "react"; // import React Component
-import { Email } from "https://smtpjs.com/v3/smtp.js";
-
-// https://reactgo.com/react-get-input-value/
+import React, { Component } from 'react' // import React Component
+import { ContactUs } from './ContactForm'
 
 class About extends Component {
-  constructor(props) {
-    super(props);
-    // this.mailService = "https://smtpjs.com/v3/smtp.js";
-    this.state = { name: "", email: "", message: "", submitMessage: "Submit" }
-  }
-
-  handleName = event => {
-    this.setState({ name: event.target.value });
-    console.log(this.state.name)
-  }
-  handleEmail = event => {
-    this.setState({ email: event.target.value });
-  }
-  handleMessage = event => {
-    this.setState({ message: event.target.value });
-  }
-
-  HandleSubmit = () => {
-    // tutorial found on https://www.youtube.com/watch?v=MV-Aqkjju64&t
-    console.log("Running Email Submission")
-    Email.send({
-      SecureToken: '5b52722e-1196-4b73-9b5d-86718fac6991', // gitleaks:allow
-      To: 'PalauRealEstateWWU@gmail.com',
-      From: 'PalauRealEstateWWU@gmail.com',
-      Subject: 'Email Submission (' + this.state.name + ')',
-      Body: 'Name: ' + this.state.name + '<br>Email: ' + this.state.email + '<br>' + this.state.message
-    })
-      .then(message => {
-        console.log('send status: ' + message)
-        // adding event to let user know their form was submitted
-        this.setState({ name: "", email: "", message: "", submitMessage: "Message Sent!" });
-        setTimeout(() => { this.setState({ submitMessage: "Submit" }) }, 5000)
-      })
-      .catch(er => {
-        console.log(er)
-      });
-
-  }
-  render() {
+  render () {
     return (
-      <div id="About">
-        <div id="maincontent" className="flex flex-main">
-          <div className="flex-about">
-            <div className="palau-problem">
+      <div id='About'>
+        <div id='maincontent' className='flex flex-main'>
+          <div className='flex-about'>
+            <div className='palau-problem'>
               <h1>Palau's Real Estate Problem</h1>
               <p>
                 In Palau, many people own a plot of land. In most cases, it is
@@ -64,7 +24,7 @@ class About extends Component {
                 handled for you!
               </p>
             </div>
-            <div className="project-purpose">
+            <div className='project-purpose'>
               <h2>Why Real Estate Palau?</h2>
               <p>
                 Palau real estate web application's purpose is to allow Palauans to
@@ -74,28 +34,16 @@ class About extends Component {
               </p>
             </div>
           </div>
-          <div className="flex-about">
-            <div className="help-form">
-              <h3 className="about-form-title">Question and Help</h3>
-              <form id="contact-form" onSubmit={this.HandleSubmit}>
-                <label className="about-name" htmlFor="name">Name</label>
-                <input type="text" id="name" onChange={this.handleName} value={this.state.name} />
-                <br />
-                <label className="about-email" htmlFor="email">Email</label>
-                <input type="email" id="email" onChange={this.handleEmail} value={this.state.email} />
-                <br />
-                <label className="about-message" htmlFor="message-box">Message</label>
-                <br />
-                <textarea name="name" id="message-box" rows="10" cols="30" onChange={this.handleMessage} value={this.state.message}></textarea>
-                <br />
-                <input type="submit" id="submit-button" name="final-message" value={this.state.submitMessage} />
-              </form>
+          <div className='flex-about'>
+            <div className='help-form'>
+              <h3 className='about-form-title'>Question and Help</h3>
+              <ContactUs />
             </div>
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default About;
+export default About

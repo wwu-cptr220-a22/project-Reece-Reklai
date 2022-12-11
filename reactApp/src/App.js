@@ -12,16 +12,16 @@ import { Route, Routes, Navigate } from 'react-router-dom'
 import { Header, Footer, LoginPopup } from './components/GeneralDetails'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {pageID: "home-page"}; 
+  constructor (props) {
+    super(props)
+    this.state = { pageID: 'home-page' }
     // TODO: update pageID on navigate to set background
     // #home-page
-    // #about 
+    // #about
     // #buy
   }
 
-  render() {
+  render () {
     return (
       <div id={this.state.pageID}>
         <Header />

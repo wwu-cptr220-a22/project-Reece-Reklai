@@ -1,4 +1,4 @@
-var weather = '';
+let weather = ''
 
 function FetchForest (props) {
   const weatherPage = 'https://forecast.weather.gov/product.php?site=GUM&issuedby=PQ&product=RWR&format=CI&version=1&glossary=0'
@@ -17,7 +17,7 @@ function FetchForest (props) {
     const kororRX = /KOROR AP/
     const kororEndRX = /KOROR WSO/
     let startIndex = weatherPage.match(startRX).index
-  
+
     // arbitrary cutoff to contain all relivant data
     const workingData = weatherPage.substring(startIndex, startIndex + 1300)
     startIndex = workingData.match(kororRX).index
