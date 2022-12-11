@@ -9,13 +9,13 @@
 }
 
 /* Boxes around nav buttons */
-#about-links
-{
+#about-links {
   padding: 0;
   margin: 0;
   float: right;
   display: block;
 }
+
 .nav-link {
   float: right;
   display: block;
@@ -27,7 +27,7 @@
 }
 
 .nav-link:hover {
-  background-color: rgb(93, 159, 221);
+  background-color: rgb(93 159 221);
   color: black;
 }
 
@@ -43,7 +43,6 @@
 .nav-link a:hover {
   text-decoration: none;
 }
-
 
 .topnav .search-container {
   float: right;
@@ -97,7 +96,7 @@
 }
 
 #cancel-bar {
-  background-color:#c5c5c54d
+  background-color: #c5c5c54d;
 }
 
 /* Favicon */
@@ -108,7 +107,6 @@
 }
 
 @media screen and (max-width: 500px) {
-
   .nav-link,
   .search-container {
     float: none;

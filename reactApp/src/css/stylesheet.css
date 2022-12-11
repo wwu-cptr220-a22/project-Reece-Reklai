@@ -1,5 +1,7 @@
-/* Make images go to bottome of page */
-body, #root, html {
+/* Make images go to bottom of page */
+body,
+#root,
+html {
   height: 100%;
 }
 
