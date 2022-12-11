@@ -3,6 +3,11 @@ import { NavLink } from 'react-router-dom'
 import { FaSearch } from 'react-icons/fa'
 
 export class Header extends Component {
+  handleLogout = () => {
+    sessionStorage.removeItem('Auth Token')
+    window.location.reload()
+  }
+  token = sessionStorage.getItem('Auth Token')
   render() {
     return (
       <div>
@@ -14,7 +19,7 @@ export class Header extends Component {
           </NavLink>
           <nav id='about-links'>
             <ul>
-              <li className='nav-link'><NavLink to='/login' className={(navData) => navData.isActive ? 'active-link' : ''}>Login</NavLink></li>
+              {this.token != null ? <li className='nav-link' onClick={this.handleLogout}>Log out</li> : <li className='nav-link'><NavLink to='/login' className={(navData) => navData.isActive ? 'active-link' : ''}>Login</NavLink></li>}
               <li className='nav-link'><NavLink to='/about' className={(navData) => navData.isActive ? 'active-link' : ''}>About</NavLink></li>
               <li className='nav-link'><NavLink to='/listings' className={(navData) => navData.isActive ? 'active-link' : ''}>Buy/Rent</NavLink></li>
             </ul>
@@ -42,48 +47,3 @@ export class Footer extends Component {
   }
 }
 
-export class LoginPopup extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { rememberUser: true }
-  }
-
-  handleClose = () => {
-    this.setState({ redirectTo: '/' })
-  }
-
-  handleRememberChange = () => {
-    this.setState({ rememberUser: !this.state.rememberUser })
-  }
-
-  render() {
-    return (
-      <div>
-        <section className='login' aria-label='login box'>
-          <div id='index-login-container' className='modal' onClick={this.handleClose}>
-            <form className='login-content animate' action='/action_page.php' method='post'>
-              <div className='index-form-content'>
-                <label htmlFor='username'><b>Username</b></label>
-                <input id='index-username' type='text' placeholder='Enter Username' name='username' required />
-                <label htmlFor='password'><b>Password</b></label>
-                <input id='index-password' type='password' placeholder='Enter Password' name='password' required />
-                <button type='submit'>Login</button>
-                <label>
-                  <input type='checkbox' checked={this.state.rememberUser ? 'checked' : ''} name='remember' onChange={this.handleRememberChange} /> Remember me
-                </label>
-              </div>
-              <div id='cancel-bar' className='index-form-content'>
-                <button
-                  type='button' onClick={this.handleClose}
-                  className='cancelbtn'
-                >Cancel
-                </button>
-                <span className='recovery'> <a href='/#'>Sign Up</a> | Forgot <a href='/#'>password?</a></span>
-              </div>
-            </form>
-          </div>
-        </section>
-      </div>
-    )
-  }
-}

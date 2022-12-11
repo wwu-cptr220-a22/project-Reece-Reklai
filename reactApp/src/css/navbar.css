@@ -24,6 +24,8 @@
   text-decoration: none;
   font-size: 17px;
   margin-top: 4px;
+  cursor: pointer;
+  color: white;
 }
 
 .nav-link:hover {
