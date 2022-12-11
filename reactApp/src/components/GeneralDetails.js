@@ -3,22 +3,18 @@ import { NavLink } from 'react-router-dom'
 import { FaSearch } from 'react-icons/fa'
 
 export class Header extends Component {
-  handleClick = () => {
-    console.log('Clicked icon!')
-    this.setState({ redirectTo: '/' })
-  }
-
-  render () {
+  render() {
     return (
       <div>
         <div className='topnav' id='myTopnav'>
-          <span className='navbar-brand' onClick={this.handleClick}><img id='favicon' src='../img/icons/palauicon.jpg' alt='palau-house' /> Palau
-            Real Estate
-          </span>
+          <NavLink to='/'>
+            <span className='navbar-brand'><img id='favicon' src='../img/icons/palauicon.jpg' alt='palau-house' /> Palau
+              Real Estate
+            </span>
+          </NavLink>
           <nav id='about-links'>
             <ul>
               <li className='nav-link'><NavLink to='/login' className={(navData) => navData.isActive ? 'active-link' : ''}>Login</NavLink></li>
-              <li className='nav-link'><NavLink to='/' className={(navData) => navData.isActive ? 'active-link' : ''}>Home</NavLink></li>
               <li className='nav-link'><NavLink to='/about' className={(navData) => navData.isActive ? 'active-link' : ''}>About</NavLink></li>
               <li className='nav-link'><NavLink to='/listings' className={(navData) => navData.isActive ? 'active-link' : ''}>Buy/Rent</NavLink></li>
             </ul>
@@ -36,7 +32,7 @@ export class Header extends Component {
 }
 
 export class Footer extends Component {
-  render () {
+  render() {
     return (
       <footer className='copyright'>
         <p>© Copyright 2022 Palau Real Estate</p>
@@ -47,7 +43,7 @@ export class Footer extends Component {
 }
 
 export class LoginPopup extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = { rememberUser: true }
   }
@@ -60,7 +56,7 @@ export class LoginPopup extends Component {
     this.setState({ rememberUser: !this.state.rememberUser })
   }
 
-  render () {
+  render() {
     return (
       <div>
         <section className='login' aria-label='login box'>

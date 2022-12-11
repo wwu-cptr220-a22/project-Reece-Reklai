@@ -124,3 +124,8 @@
     margin: 4px 0;
   }
 }
+
+.active-link {
+  font-weight: bolder;
+  text-decoration: underline;
+}
