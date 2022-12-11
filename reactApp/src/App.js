@@ -10,6 +10,7 @@ import Listings from './components/Listings'
 import About from './components/About'
 import { Route, Routes, Navigate } from 'react-router-dom'
 import { Header, Footer, LoginPopup } from './components/GeneralDetails'
+import { app } from './firebase-config' // eslint-disable-line
 
 class App extends Component {
   constructor (props) {
