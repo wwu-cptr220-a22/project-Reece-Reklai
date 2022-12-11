@@ -12,14 +12,7 @@ html {
   background-repeat: no-repeat;
   background-size: auto;
   background-color: rgba(0 0 0 / 50%);
-}
-
-#about {
-  text-align: left;
-  background-image: url("../img/palau-background/road-trip.jpg"); /* stylelint-disable-line */
-  background-repeat: no-repeat;
-  background-size: auto;
-  height: 100%;
+  min-height: 100%;
 }
 
 #buy {

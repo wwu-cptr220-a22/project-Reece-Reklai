@@ -22,6 +22,8 @@ class App extends Component {
   }
 
   render () {
+    const pathname = window.location.pathname
+    console.log(pathname)
     return (
       <div id={this.state.pageID}>
         <Header />
