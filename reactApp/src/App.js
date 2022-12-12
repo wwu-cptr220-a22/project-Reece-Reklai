@@ -11,7 +11,7 @@ import { Route, Routes, Navigate, useNavigate } from 'react-router-dom'
 import { Header, Footer } from './components/GeneralDetails'
 import LoginPopup from './components/LRForm'
 import Post from './components/WritePost'
-import { app } from './firebase-config' // eslint-disable-line
+import { app, database } from './firebase-config' // eslint-disable-line
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
