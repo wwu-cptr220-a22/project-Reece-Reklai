@@ -10,6 +10,7 @@ import About from './components/About'
 import { Route, Routes, Navigate, useNavigate } from 'react-router-dom'
 import { Header, Footer } from './components/GeneralDetails'
 import LoginPopup from './components/LRForm'
+import Post from './components/WritePost'
 import { app } from './firebase-config' // eslint-disable-line
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
 import { ToastContainer, toast } from 'react-toastify'
@@ -66,6 +67,7 @@ function App() {
         <Route path='/listings' element={<Listings />} />
         <Route path='/about' element={<About />} />
         <Route path='/login' element={<LoginPopup setEmail={setEmail} setPassword={setPassword} handleAction={(id) => handleAction(id)}/>} />
+        <Route path='/post' element={<Post />} />
         <Route path='*' element={<Navigate to='/' replace />} />
       </Routes>
       <Footer />

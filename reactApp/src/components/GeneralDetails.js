@@ -19,7 +19,8 @@ export class Header extends Component {
           </NavLink>
           <nav id='about-links'>
             <ul>
-              {this.token != null ? <li className='nav-link' onClick={this.handleLogout}>Log out</li> : <li className='nav-link'><NavLink to='/login' className={(navData) => navData.isActive ? 'active-link' : ''}>Login</NavLink></li>}
+              {this.token != null ? <li className='nav-link' onClick={this.handleLogout}>Log out</li> : <li className='nav-link'><NavLink to='/login' className={(navData) => navData.isActive ? 'active-link' : ''}>Login/Register</NavLink></li>}
+              {this.token != null ? <li className='nav-link'><NavLink to='/post' className={(navData) => navData.isActive ? 'active-link' : ''}>Create Post</NavLink></li> : <></>}
               <li className='nav-link'><NavLink to='/about' className={(navData) => navData.isActive ? 'active-link' : ''}>About</NavLink></li>
               <li className='nav-link'><NavLink to='/listings' className={(navData) => navData.isActive ? 'active-link' : ''}>Buy/Rent</NavLink></li>
             </ul>

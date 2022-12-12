@@ -83,7 +83,7 @@ button:hover {
   margin-left: 2rem;
   width: auto;
   padding: 10px 18px;
-  background-color: rgb(75, 75, 141);
+  background-color: rgb(75 75 141);
 }
 
 /* Padding for the form container located in the index */
@@ -203,4 +203,27 @@ span.recovery {
 
 html {
   scroll-behavior: smooth;
+}
+
+.label-text {
+  color: whitesmoke;
+  padding-right: 10px;
+}
+
+#details-input{
+  width: 100%;
+}
+
+#post-button {
+  justify-self: center;
+  background-color: rgb(75 75 141);
+  color: white; 
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.text-input {
+  display: block;
+  max-width: 25rem;
 }
