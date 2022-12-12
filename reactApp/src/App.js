@@ -20,7 +20,6 @@ function App() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
-  
   const handleAction = (id) => {
     const authentication = getAuth()
     if (id === 1) {
@@ -53,6 +52,16 @@ function App() {
         })
     }
   }
+  const [ul_image, setImage] = useState('')
+  const [ul_price, setPrice] = useState('')
+  const [ul_latitude, setLatitude] = useState('')
+  const [ul_longitude, setLongitude] = useState('')
+  const [ul_details, setDetails] = useState('')
+
+  const handlePost = () => {
+    let post = {image: ul_image, price: ul_price, lat: ul_latitude, lng: ul_longitude, details: ul_details}
+    console.log(post)
+  }
 
   return (
     <div id='home-page'>
@@ -63,7 +72,7 @@ function App() {
         <Route path='/listings' element={<Listings />} />
         <Route path='/about' element={<About />} />
         <Route path='/login' element={<LoginPopup setEmail={setEmail} setPassword={setPassword} handleAction={(id) => handleAction(id)} />} />
-        <Route path='/post' element={<Post />} />
+        <Route path='/post' element={<Post setImage={setImage} setPrice={setPrice} setLatitude={setLatitude} setLongitude={setLongitude} setDetails={setDetails} handleAction={() => handlePost()}/>} />
         <Route path='*' element={<Navigate to='/' replace />} />
       </Routes>
       <Footer />
