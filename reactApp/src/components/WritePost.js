@@ -10,10 +10,10 @@ class CreatePost extends Component {
         return (
             <div id='maincontent-dark'>
                 <div className='flex-about'>
-                    <div className='help-form'>
+                    <div className='post-form'>
                         <div className='flex-item'>
                             <label className='label-text' htmlFor='picture'><b>Picture</b></label>
-                            <input className='text-input' name='picture' />
+                            <input className='text-input' name='picture' type='file'/>
                             <label className='label-text' htmlFor='price'><b>Price</b></label>
                             <input className='text-input' placeholder='$0.00' name='price' required />
                             <label className='label-text' htmlFor='latitude'><b>Latitude</b></label>

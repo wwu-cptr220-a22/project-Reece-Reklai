@@ -208,6 +208,7 @@ html {
 .label-text {
   color: whitesmoke;
   padding-right: 10px;
+  font-weight: lighter;
 }
 
 #details-input{
@@ -217,13 +218,20 @@ html {
 #post-button {
   justify-self: center;
   background-color: rgb(75 75 141);
-  color: white; 
+  color: whitesmoke; 
   width: 50%;
   margin-left: 25%;
   margin-right: 25%;
 }
 
 .text-input {
+  color: whitesmoke;
   display: block;
-  max-width: 25rem;
+  width: 15rem;
+}
+
+.post-form {
+  margin-left: 10%;
+  width: 80%;
+  
 }
