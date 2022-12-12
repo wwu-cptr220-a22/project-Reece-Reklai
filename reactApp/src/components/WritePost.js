@@ -5,7 +5,7 @@ class CreatePost extends Component {
     handlePost = () => {
 
     }
-
+    // if time https://www.geeksforgeeks.org/how-to-upload-image-and-preview-it-using-reactjs/
     render() {
         return (
             <div id='maincontent-dark'>
