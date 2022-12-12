@@ -13,6 +13,7 @@ import LoginPopup from './components/LRForm'
 import Post from './components/WritePost'
 import { app, database } from './firebase-config' // eslint-disable-line
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
+import { ref, set, get, child } from 'firebase/database'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -59,10 +60,23 @@ function App() {
   const [ul_details, setDetails] = useState('')
 
   const handlePost = () => {
-    let post = {image: ul_image, price: ul_price, lat: ul_latitude, lng: ul_longitude, details: ul_details}
+    const token = sessionStorage.getItem('Auth Token')
+    let post = { image: ul_image, price: ul_price, lat: ul_latitude, lng: ul_longitude, details: ul_details }
     console.log(post)
+    set(ref(database, 'posts/' + token), post)
   }
-
+  // https://firebase.google.com/docs/database/web/read-and-write?authuser=0#web-version-9_1
+  const handleQuerryDatabase = () => {
+    get(child(database, 'posts/')).then((snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+      } else {
+        console.log("No data available");
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
+  }
   return (
     <div id='home-page'>
       <Header />
@@ -72,7 +86,7 @@ function App() {
         <Route path='/listings' element={<Listings />} />
         <Route path='/about' element={<About />} />
         <Route path='/login' element={<LoginPopup setEmail={setEmail} setPassword={setPassword} handleAction={(id) => handleAction(id)} />} />
-        <Route path='/post' element={<Post setImage={setImage} setPrice={setPrice} setLatitude={setLatitude} setLongitude={setLongitude} setDetails={setDetails} handleAction={() => handlePost()}/>} />
+        <Route path='/post' element={<Post setImage={setImage} setPrice={setPrice} setLatitude={setLatitude} setLongitude={setLongitude} setDetails={setDetails} handleAction={() => handlePost()} />} />
         <Route path='*' element={<Navigate to='/' replace />} />
       </Routes>
       <Footer />

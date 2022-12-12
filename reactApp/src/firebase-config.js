@@ -19,4 +19,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig); // eslint-disable-line
 
 // Initialize Realtime Database and get a reference to the service
-const database = getDatabase(app); // eslint-disable-line
+export const database = getDatabase(app); // eslint-disable-line
