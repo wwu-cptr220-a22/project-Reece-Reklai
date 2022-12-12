@@ -15,12 +15,13 @@ import { app } from './firebase-config' // eslint-disable-line
 import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-
+import firebase from 'firebase/app'
 
 function App() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
+  let database = null
   const handleAction = (id) => {
     const authentication = getAuth()
     if (id === 1) {
@@ -53,7 +54,11 @@ function App() {
         })
     }
   }
-
+  const componentDidMount = async () => {
+      firebase.initializeApp(app)
+      database = firebase.database()
+      // refresh page....
+  }
   // useEffect(() => {
   //   const authToken = sessionStorage.getItem('Auth Token')
   // }, [])
@@ -66,7 +71,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/listings' element={<Listings />} />
         <Route path='/about' element={<About />} />
-        <Route path='/login' element={<LoginPopup setEmail={setEmail} setPassword={setPassword} handleAction={(id) => handleAction(id)}/>} />
+        <Route path='/login' element={<LoginPopup setEmail={setEmail} setPassword={setPassword} handleAction={(id) => handleAction(id)} />} />
         <Route path='/post' element={<Post />} />
         <Route path='*' element={<Navigate to='/' replace />} />
       </Routes>
