@@ -1,4 +1,4 @@
-import React, { useState } from 'react' // import React Component
+import React, { useEffect, useState } from 'react' // import React Component
 import './css/stylesheet.css'
 import './css/navbar.css'
 import './css/flex-style.css'
@@ -19,13 +19,12 @@ import hash from 'object-hash'
 import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
-  let uid = null;
+  let databaseSnapshot = null;
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
   const handleAction = (id) => {
     const authentication = getAuth()
-    uid = authentication.currentUser
     if (id === 1) {
       signInWithEmailAndPassword(authentication, email, password)
         .then((response) => {
@@ -64,22 +63,19 @@ function App() {
   const [ul_address, setAddress] = useState('')
 
   const handlePost = () => {
-    // todo: get app/database to have correct uid attribute
-    database.uid = uid
     let post = { image: ul_image, address: ul_address, price: ul_price, lat: ul_latitude, lng: ul_longitude, details: ul_details }
     console.log(post)
     const postID = getHash(post);
     console.log(postID)
     set(ref(database, 'posts/' + postID), post)
+    .then(() => { handleQuerryDatabase() })
   }
   // https://firebase.google.com/docs/database/web/read-and-write?authuser=0#web-version-9_1
   const handleQuerryDatabase = () => {
-    // database.ref().once('value').then... 
-    console.log("outside")
     get(ref(database, 'posts/')).then((snapshot) => {
-      console.log(snapshot)
       if (snapshot.exists()) {
         console.log(snapshot.val());
+        databaseSnapshot = snapshot.val();
       } else {
         console.log("No data available");
       }
@@ -92,14 +88,18 @@ function App() {
   function getHash(post) {
     return hash(post)
   }
-
+  useEffect(() => {
+    handleQuerryDatabase(() => {
+    });
+  }, [databaseSnapshot]); // eslint-disable-line
+  
   return (
     <div id='home-page'>
       <Header />
       <ToastContainer />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/listings' element={<Listings post={() => getPostObject()} handleAction={() => handleQuerryDatabase()}/>} />
+        <Route path='/listings' element={<Listings currentListings={databaseSnapshot} post={() => getPostObject()} />} />
         <Route path='/about' element={<About />} />
         <Route path='/login' element={<LoginPopup setEmail={setEmail} setPassword={setPassword} handleAction={(id) => handleAction(id)} />} />
         <Route path='/post' element={getPostObject()} />
