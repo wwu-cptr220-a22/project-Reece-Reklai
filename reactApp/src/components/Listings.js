@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import GMap from './GMap'
-import WritePost from './WritePost'
+// import WritePost from './WritePost'
 
 // load google map script
 const loadGoogleMapScript = (callback) => {
@@ -14,7 +14,7 @@ const loadGoogleMapScript = (callback) => {
   }
 }
 
-const Listings = () => {
+const Listings = (props) => {
   const [loadMap, setLoadMap] = useState(false);
 
   useEffect(() => {
@@ -22,6 +22,8 @@ const Listings = () => {
       setLoadMap(true)
     });
   }, []);
+
+  var token = sessionStorage.getItem('Auth Token')
 
   return (
     <>
@@ -31,9 +33,9 @@ const Listings = () => {
             <h2>Buy</h2>
             <section className="post flex-item">
               <h3>Price: 495,000.00</h3>
-              <a href="https://remax-palau.com/homes/listing_details/PLW-1568465245">
+              {/* <a href="https://remax-palau.com/homes/listing_details/PLW-1568465245">
                 001N06 Ngeruos Ngerusar, Babeldaob 96940
-              </a>
+              </a> */}
               <div className="image-panel">
                 <img
                   className="listing-photo"
@@ -45,24 +47,25 @@ const Listings = () => {
                 </div>
               </div>
               <ul>
-                  <li>
-                    <em>Property Type:</em> Single Fmly For Sale
-                  </li>
-                  <li>
-                    <em># of Bedrooms:</em> 4
-                  </li>
-                  <li>
-                    <em># of Bathrooms:</em> 3
-                  </li>
-                  <li>
-                    <em>Square Footage:</em> 2600 SqFt
-                  </li>
-                  <li>
-                    <em>Description:</em> Also available to rent
-                  </li>
-                </ul>
-              <WritePost></WritePost>
+                <li>
+                  <em>Property Type:</em> Single Fmly For Sale
+                </li>
+                <li>
+                  <em># of Bedrooms:</em> 4
+                </li>
+                <li>
+                  <em># of Bathrooms:</em> 3
+                </li>
+                <li>
+                  <em>Square Footage:</em> 2600 SqFt
+                </li>
+                <li>
+                  <em>Description:</em> Also available to rent
+                </li>
+              </ul>
             </section>
+            <button onClick={() => props.handleAction()}></button>
+            {token != null ? props.post() : <></>}
           </div>
         </main>
       </div>

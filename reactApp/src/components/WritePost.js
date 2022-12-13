@@ -15,9 +15,11 @@ class CreatePost extends Component {
                     <form className='post-form' onSubmit={this.handlePost}>
                         <div className='flex-item'>
                             <label className='label-text' htmlFor='picture'><b>Picture</b></label>
-                            <input className='file-input' name='picture' type='file' onChange={(e) => this.props.setImage(e.target.value)} />
+                            <input className='text-input' placeholder='www.picture.com' name='picture' type='text' onChange={(e) => this.props.setImage(e.target.value)} />
                             <label className='label-text' htmlFor='price'><b>Price</b></label>
                             <input className='text-input' placeholder='$0.00' name='price' required onChange={(e) => this.props.setPrice(e.target.value)} />
+                            <label className='label-text' htmlFor='address'><b>Address</b></label>
+                            <input className='text-input' placeholder='address' name='address' required onChange={(e) => this.props.setAddress(e.target.value)} />
                             <label className='label-text' htmlFor='latitude'><b>Latitude</b></label>
                             <input className='text-input' placeholder='7.53644' name='latitude' required onChange={(e) => this.props.setLatitude(e.target.value)} />
                             <label className='label-text' htmlFor='longitude'><b>Longitude</b></label>
