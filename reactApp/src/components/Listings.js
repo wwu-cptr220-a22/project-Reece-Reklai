@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import GMap from './GMap'
- 
+
 // load google map script
 const loadGoogleMapScript = (callback) => {
   if (typeof window.google === 'object' && typeof window.google.maps === 'object') {
@@ -12,21 +12,21 @@ const loadGoogleMapScript = (callback) => {
     googleMapScript.addEventListener("load", callback);
   }
 }
- 
+
 const Listings = () => {
   const [loadMap, setLoadMap] = useState(false);
- 
+
   useEffect(() => {
     loadGoogleMapScript(() => {
       setLoadMap(true)
     });
   }, []);
- 
+
   return (
-      <>
+    <>
       <div id="body-container">
         <main id="maincontent">
-          <div className="flex flex-main">
+          <div className="flex flex-list">
             <h2>Buy</h2>
             <section className="post flex-item">
               <h3>Price: 495,000.00</h3>
@@ -39,27 +39,27 @@ const Listings = () => {
                   alt="House"
                   src="https://remax-palau.com/uploads/listings/1602145527_Entry.JPG"
                 ></img>
-                <div>
-                {!loadMap ? <div>Loading...</div> : <GMap />}
+                <div className='map'>
+                  {!loadMap ? <div>Loading...</div> : <GMap />}
                 </div>
-                <ul>
-                <li>
-                  <em>Property Type:</em> Single Fmly For Sale
-                </li>
-                <li>
-                  <em># of Bedrooms:</em> 4
-                </li>
-                <li>
-                  <em># of Bathrooms:</em> 3
-                </li>
-                <li>
-                  <em>Square Footage:</em> 2600 SqFt
-                </li>
-                <li>
-                  <em>Description:</em> Also available to rent
-                </li>
-              </ul>
               </div>
+              <ul>
+                  <li>
+                    <em>Property Type:</em> Single Fmly For Sale
+                  </li>
+                  <li>
+                    <em># of Bedrooms:</em> 4
+                  </li>
+                  <li>
+                    <em># of Bathrooms:</em> 3
+                  </li>
+                  <li>
+                    <em>Square Footage:</em> 2600 SqFt
+                  </li>
+                  <li>
+                    <em>Description:</em> Also available to rent
+                  </li>
+                </ul>
             </section>
           </div>
         </main>
@@ -67,5 +67,5 @@ const Listings = () => {
     </>
   );
 }
- 
+
 export default Listings;

@@ -4,11 +4,8 @@
 }
 
 .map {
-  background-color: #195cc1;
-  height: 150px;
-  width: auto;
-  justify-content: right;
-  margin-left: 0.5rem;
+  height: 15.7rem;
+  width: 20rem;
 }
 
 /* Incidental Styling */
@@ -35,11 +32,9 @@
 
 /* Google Maps */
 .google-maps {
-  width: 65%;
-  max-height: 250px;
-  padding: 0;
-  margin: 0;
-  margin-left: 0.5rem;
+  width: 100%;
+  height: 100%;
+  margin-left: 10px;
 }
 
 /* on 598px OR LARGER displays */
@@ -56,13 +51,14 @@
 /* on 992px OR LARGER displays */
 @media (min-width: 992px) {
   .map {
-    margin-left: 2rem;
+    margin-left: 0.3rem;
   }
 }
 
 @media (min-width: 1200px) {
   .map {
-    margin-left: 3rem;
+    margin-left: 0.5rem;
+    width: 30rem;
   }
 }
 

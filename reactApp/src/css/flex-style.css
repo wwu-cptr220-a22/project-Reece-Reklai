@@ -30,7 +30,8 @@ body {
   height: 100%;
 }
 
-.flex-main {
+.flex-main,
+.flex-list {
   flex-direction: column;
   width: 100%;
 }

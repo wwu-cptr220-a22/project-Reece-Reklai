@@ -26,7 +26,7 @@ const GMap = () => {
  
   return <div
     ref={googleMapRef}
-    style={{ width: 600, height: 500 }}
+    className="google-maps"
   />
 }
  
