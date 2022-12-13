@@ -25,7 +25,6 @@ const Listings = (props) => {
 
   var token = sessionStorage.getItem('Auth Token')
 
-
   // post = { image: ul_image, address: ul_address, price: ul_price, lat: ul_latitude, lng: ul_longitude, details: ul_details }
   function setUpPost(post) {
     return (
@@ -45,14 +44,24 @@ const Listings = (props) => {
       </section>
     )
   }
-
+  const getListings = () => {
+    console.log(props.currentListings)
+    if (props.currentListings !== null) {
+      props.currentListings.forEach(element => {
+        console.log("break")
+        console.log(element)
+      });
+    }
+    return <div></div>
+  }
+  const displayListing = getListings()
   return (
     <>
       <div id="body-container">
         <main id="maincontent">
           <div className="flex flex-list">
             <h2>Buy</h2>
-            {setUpPost(props.currentListings[0])}
+            {displayListing}
             <button onClick={() => props.handleAction()}></button>
             {token != null ? props.post() : <></>}
           </div>
