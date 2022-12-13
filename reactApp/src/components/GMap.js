@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
  
-const GMap = () => {
+const GMap = (props) => {
   const googleMapRef = useRef(null);
   let googleMap = null;
  
@@ -20,7 +20,7 @@ const GMap = () => {
  
   // create marker on google map
   const createMarker = () => new window.google.maps.Marker({
-    position: { lat: 7.496529, lng: 134.568938 },
+    position: { lat: props.lat, lng: props.lng },
     map: googleMap
   });
  
