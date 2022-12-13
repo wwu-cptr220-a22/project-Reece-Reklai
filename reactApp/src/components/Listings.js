@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import GMap from './GMap'
+import WritePost from './WritePost'
  
 // load google map script
 const loadGoogleMapScript = (callback) => {
@@ -60,6 +61,7 @@ const Listings = () => {
                 </li>
               </ul>
               </div>
+              <WritePost></WritePost>
             </section>
           </div>
         </main>
