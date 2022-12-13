@@ -67,7 +67,8 @@ function App() {
     database.uid = uid
     let post = { image: ul_image, price: ul_price, lat: ul_latitude, lng: ul_longitude, details: ul_details }
     console.log(post)
-    set(ref(database, 'posts/' + token), post)
+    const postID = getHash(post);
+    set(ref(database, 'posts/' + token + "/" + postID), post)
   }
   // https://firebase.google.com/docs/database/web/read-and-write?authuser=0#web-version-9_1
   const handleQuerryDatabase = () => {
@@ -83,6 +84,11 @@ function App() {
     });
   }
   // database authentication https://youtu.be/PUBnlbjZFAI
+
+  function getHash(post) {
+    return 
+  }
+
   return (
     <div id='home-page'>
       <Header />
