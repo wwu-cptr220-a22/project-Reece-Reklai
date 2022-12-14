@@ -20,10 +20,9 @@ import 'react-toastify/dist/ReactToastify.css'
 import PostsList from './components/PostsList'
 
 function App() {
-  let databaseSnapshot = null;
-  let listing = <PostsList databaseSnapshot={databaseSnapshot} />
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [databaseSnapshot, setDatabaseSnapShot] = useState([])
   const navigate = useNavigate()
   const handleAction = (id) => {
     const authentication = getAuth()
@@ -74,16 +73,18 @@ function App() {
   }
   // https://firebase.google.com/docs/database/web/read-and-write?authuser=0#web-version-9_1
   const handleQuerryDatabase = () => {
+    let databaseTemp = []
     get(ref(database, 'posts'))
     .then((snapshot) => {
       if (snapshot.exists()) {
-        databaseSnapshot = []
         console.log(snapshot.val())
-        listing = snapshot.forEach((childSnapshot) => {
-          const info = childSnapshot.val()
-          databaseSnapshot.push(PostsList(info.price, info.address, info.image, info.details))
+        snapshot.forEach((childSnapshot) => {
+        const info = childSnapshot.val()
+        databaseTemp.push(PostsList(info.price, info.address, info.image, info.details))
       })
+        setDatabaseSnapShot(databaseTemp)
         console.log(databaseSnapshot)
+        return databaseSnapshot
       } else {
         console.log("No data available");
       }
@@ -91,6 +92,7 @@ function App() {
       .catch((error) => {
         console.error(error);
       });
+    return databaseSnapshot
   }
   // database authentication https://youtu.be/PUBnlbjZFAI
 
@@ -108,7 +110,7 @@ function App() {
       <ToastContainer />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/listings' element={<Listings currentListings={listing} post={() => getPostObject()} />} />
+        <Route path='/listings' element={<Listings currentListings={() => handleQuerryDatabase()} post={() => getPostObject()} />} />
         <Route path='/about' element={<About />} />
         <Route path='/login' element={<LoginPopup setEmail={setEmail} setPassword={setPassword} handleAction={(id) => handleAction(id)} />} />
         <Route path='/post' element={getPostObject()} />

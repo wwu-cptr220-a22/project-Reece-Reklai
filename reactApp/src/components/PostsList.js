@@ -4,7 +4,7 @@ import React from 'react' // import React Component
 function PostsList(price, address, image, details) {
     // if time https://www.geeksforgeeks.org/how-to-upload-image-and-preview-it-using-reactjs/
     // post = { image: ul_image, address: ul_address, price: ul_price, lat: ul_latitude, lng: ul_longitude, details: ul_details }
-    const post = (
+    return (
         <section className="post flex-item">
             <h3>Price: {price}</h3>
             <div>{address}</div>
@@ -21,8 +21,6 @@ function PostsList(price, address, image, details) {
             {details}
         </section>
     )
-
-    return post
 }
 
 export default PostsList

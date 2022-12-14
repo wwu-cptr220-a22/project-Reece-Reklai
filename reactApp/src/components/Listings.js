@@ -24,21 +24,14 @@ const Listings = (props) => {
   }, []);
 
   var token = sessionStorage.getItem('Auth Token')
-
-  useEffect(() =>{
-    loadGoogleMapScript(() => {
-      setLoadMap(true)
-    });
-  }, []);
-
+  var test = props.currentListings()
   return (
     <>
       <div id="body-container">
         <main id="maincontent">
           <div className="flex flex-list">
             <h2>Buy</h2>
-            {props.listing}
-            <button onClick={() => props.handleAction()}></button>
+            {test}
             {token != null ? props.post() : <></>}
           </div>
         </main>
