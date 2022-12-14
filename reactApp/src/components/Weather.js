@@ -24,7 +24,7 @@ function FetchForest (props) {
     const endIndex = workingData.match(kororEndRX).index
     return workingData.substring(startIndex, endIndex)
   }
-  promise.then((value) => {weather = value})
+  promise.then((value) => { weather = value })
   return weather
 }
 
