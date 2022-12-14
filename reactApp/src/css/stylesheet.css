@@ -11,7 +11,7 @@ html {
   background-image: url("../img/palau-background/palau-land.jpg"); /* stylelint-disable-line */
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100%;
+  background-attachment: fixed;
 }
 
 #buy {
