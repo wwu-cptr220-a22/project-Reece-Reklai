@@ -2,36 +2,48 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 .topnav {
   overflow: hidden;
   background-color: #404040;
   padding: 5px 8px;
 }
 
+/* Boxes around nav buttons */
+#about-links {
+  padding: 0;
+  margin: 0;
+  float: right;
+  display: block;
+}
+
 .nav-link {
   float: right;
   display: block;
-  color: #ddd;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
   margin-top: 4px;
+  cursor: pointer;
+  color: white;
 }
 
 .nav-link:hover {
-  background-color: #ddd;
+  background-color: rgb(93 159 221);
   color: black;
 }
 
 .nav-link.active {
   background-color: #2196f3;
   color: white;
+}
+
+.nav-link a {
+  color: white;
+}
+
+.nav-link a:hover {
+  text-decoration: none;
 }
 
 .topnav .search-container {
@@ -51,8 +63,8 @@ body {
 
 #search-button {
   padding: 5px;
+  margin: 8px;
   margin-top: 20px;
-  margin-right: 8px;
   background: #2196f3;
   font-size: 15px;
   display: inline-block;
@@ -62,10 +74,6 @@ body {
 
 #search-button:hover {
   background: #ddd;
-}
-
-.topnav .icon {
-  display: none;
 }
 
 .skip-nav-link {
@@ -86,6 +94,18 @@ body {
   color: white;
   padding-left: 2px;
   vertical-align: middle;
+  display: inline-block;
+}
+
+#cancel-bar {
+  background-color: #c5c5c54d;
+}
+
+/* Favicon */
+#favicon {
+  width: 50px;
+  height: 50px;
+  margin-right: 25px;
 }
 
 @media screen and (max-width: 500px) {
@@ -105,4 +125,9 @@ body {
     padding: 4px;
     margin: 4px 0;
   }
+}
+
+.active-link {
+  font-weight: bolder;
+  text-decoration: underline;
 }
