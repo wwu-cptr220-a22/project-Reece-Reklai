@@ -17,9 +17,11 @@ import { ref, set, get } from 'firebase/database'
 import { ToastContainer, toast } from 'react-toastify'
 import hash from 'object-hash'
 import 'react-toastify/dist/ReactToastify.css'
+import PostsList from './components/PostsList'
 
 function App() {
   let databaseSnapshot = null;
+  let listing = <PostsList databaseSnapshot={databaseSnapshot} />
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const navigate = useNavigate()
@@ -68,20 +70,27 @@ function App() {
     const postID = getHash(post);
     console.log(postID)
     set(ref(database, 'posts/' + postID), post)
-    .then(() => { handleQuerryDatabase() })
+      .then(() => { handleQuerryDatabase() })
   }
   // https://firebase.google.com/docs/database/web/read-and-write?authuser=0#web-version-9_1
   const handleQuerryDatabase = () => {
-    get(ref(database, 'posts/')).then((snapshot) => {
+    get(ref(database, 'posts'))
+    .then((snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
-        databaseSnapshot = snapshot.val();
+        databaseSnapshot = []
+        console.log(snapshot.val())
+        listing = snapshot.forEach((childSnapshot) => {
+          const info = childSnapshot.val()
+          databaseSnapshot.push(PostsList(info.price, info.address, info.image, info.details))
+      })
+        console.log(databaseSnapshot)
       } else {
         console.log("No data available");
       }
-    }).catch((error) => {
-      console.error(error);
-    });
+    })
+      .catch((error) => {
+        console.error(error);
+      });
   }
   // database authentication https://youtu.be/PUBnlbjZFAI
 
@@ -92,14 +101,14 @@ function App() {
     handleQuerryDatabase(() => {
     });
   }, [databaseSnapshot]); // eslint-disable-line
-  
+
   return (
     <div id='home-page'>
       <Header />
       <ToastContainer />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/listings' element={<Listings currentListings={databaseSnapshot} post={() => getPostObject()} />} />
+        <Route path='/listings' element={<Listings currentListings={listing} post={() => getPostObject()} />} />
         <Route path='/about' element={<About />} />
         <Route path='/login' element={<LoginPopup setEmail={setEmail} setPassword={setPassword} handleAction={(id) => handleAction(id)} />} />
         <Route path='/post' element={getPostObject()} />
