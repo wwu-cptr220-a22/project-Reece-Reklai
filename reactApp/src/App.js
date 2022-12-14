@@ -73,14 +73,14 @@ function App() {
   }
   // https://firebase.google.com/docs/database/web/read-and-write?authuser=0#web-version-9_1
   const handleQuerryDatabase = () => {
-    let databaseTemp = []
+    var databaseTemp = []
     get(ref(database, 'posts'))
     .then((snapshot) => {
       if (snapshot.exists()) {
         console.log(snapshot.val())
         snapshot.forEach((childSnapshot) => {
         const info = childSnapshot.val()
-        databaseTemp.push(PostsList(info.price, info.address, info.image, info.details))
+        databaseTemp.push(PostsList(info.price, info.address, info.image, info.details, info.lat, info.lng))
       })
         setDatabaseSnapShot(databaseTemp)
         console.log(databaseSnapshot)

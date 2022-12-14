@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import GMap from './GMap'
+import React, { useEffect, useState } from 'react' // import React Component
 // import WritePost from './WritePost'
 
 // load google map script
@@ -23,16 +22,14 @@ const Listings = (props) => {
     });
   }, []);
 
-  var token = sessionStorage.getItem('Auth Token')
-  var test = props.currentListings()
+  var list = props.currentListings()
   return (
     <>
       <div id="body-container">
         <main id="maincontent">
           <div className="flex flex-list">
             <h2>Buy</h2>
-            {test}
-            {token != null ? props.post() : <></>}
+            {list}
           </div>
         </main>
       </div>

@@ -10,8 +10,7 @@ html {
 #home-page {
   background-image: url("../img/palau-background/palau-land.jpg"); /* stylelint-disable-line */
   background-repeat: no-repeat;
-  background-size: auto;
-  background-color: black;
+  background-size: cover;
   min-height: 100%;
 }
 
@@ -88,7 +87,7 @@ button:hover {
 
 /* Padding for the form container located in the index */
 .index-form-content {
-  padding: 16px;
+  padding: 50px;
 }
 
 /* The recovery text on the form container located in the index */
@@ -167,7 +166,7 @@ span.recovery {
 
 /* Carousel */
 #carousel {
-  margin-top: 750px;
+  height: 100%;
 }
 
 @keyframes fade-in {
@@ -199,6 +198,7 @@ span.recovery {
 .copyright {
   color: white;
   text-align: center;
+  background-color: #000;
 }
 
 html {

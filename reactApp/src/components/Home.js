@@ -50,7 +50,7 @@ class Home extends Component {
               <div className='carousel-item active' data-bs-interval='5000'>
                 <img
                   src='../img/palau-background/resort.jpg'
-                  className='d-block w-100'
+                  className='d-block'
                   alt='...'
                 />
                 <div className='carousel-caption d-md-block'>
