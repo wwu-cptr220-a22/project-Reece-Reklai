@@ -56,15 +56,15 @@ function App () {
         })
     }
   }
-  const [ul_image, setImage] = useState('')
-  const [ul_price, setPrice] = useState('')
-  const [ul_latitude, setLatitude] = useState('')
-  const [ul_longitude, setLongitude] = useState('')
-  const [ul_details, setDetails] = useState('')
-  const [ul_address, setAddress] = useState('')
+  const [ulImage, setImage] = useState('')
+  const [ulPrice, setPrice] = useState('')
+  const [ulLatitude, setLatitude] = useState('')
+  const [ulLongitude, setLongitude] = useState('')
+  const [ulDetails, setDetails] = useState('')
+  const [ulAddress, setAddress] = useState('')
 
   const handlePost = () => {
-    const post = { image: ul_image, address: ul_address, price: ul_price, lat: ul_latitude, lng: ul_longitude, details: ul_details }
+    const post = { image: ulImage, address: ulAddress, price: ulPrice, lat: ulLatitude, lng: ulLongitude, details: ulDetails }
     console.log(post)
     const postID = getHash(post)
     console.log(postID)

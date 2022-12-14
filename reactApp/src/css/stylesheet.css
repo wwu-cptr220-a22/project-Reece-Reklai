@@ -211,14 +211,14 @@ html {
   font-weight: lighter;
 }
 
-#details-input{
+#details-input {
   width: 100%;
 }
 
 #post-button {
   justify-self: center;
   background-color: rgb(75 75 141);
-  color: whitesmoke; 
+  color: whitesmoke;
   width: 50%;
   margin-left: 25%;
   margin-right: 25%;
@@ -228,6 +228,7 @@ html {
   display: block;
   width: 15rem;
 }
+
 .file-input {
   display: block;
   width: 15rem;
@@ -237,5 +238,4 @@ html {
 .post-form {
   margin-left: 10%;
   width: 80%;
-  
 }
