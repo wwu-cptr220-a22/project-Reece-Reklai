@@ -19,7 +19,7 @@ import hash from 'object-hash'
 import 'react-toastify/dist/ReactToastify.css'
 import PostsList from './components/PostsList'
 
-function App() {
+function App () {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [databaseSnapshot, setDatabaseSnapShot] = useState([])
@@ -64,44 +64,44 @@ function App() {
   const [ul_address, setAddress] = useState('')
 
   const handlePost = () => {
-    let post = { image: ul_image, address: ul_address, price: ul_price, lat: ul_latitude, lng: ul_longitude, details: ul_details }
+    const post = { image: ul_image, address: ul_address, price: ul_price, lat: ul_latitude, lng: ul_longitude, details: ul_details }
     console.log(post)
-    const postID = getHash(post);
+    const postID = getHash(post)
     console.log(postID)
     set(ref(database, 'posts/' + postID), post)
       .then(() => { handleQuerryDatabase() })
   }
   // https://firebase.google.com/docs/database/web/read-and-write?authuser=0#web-version-9_1
   const handleQuerryDatabase = () => {
-    var databaseTemp = []
+    const databaseTemp = []
     get(ref(database, 'posts'))
-    .then((snapshot) => {
-      if (snapshot.exists()) {
-        console.log(snapshot.val())
-        snapshot.forEach((childSnapshot) => {
-        const info = childSnapshot.val()
-        databaseTemp.push(PostsList(info.price, info.address, info.image, info.details, info.lat, info.lng))
+      .then((snapshot) => {
+        if (snapshot.exists()) {
+          console.log(snapshot.val())
+          snapshot.forEach((childSnapshot) => {
+            const info = childSnapshot.val()
+            databaseTemp.push(PostsList(info.price, info.address, info.image, info.details, info.lat, info.lng))
+          })
+          setDatabaseSnapShot(databaseTemp)
+          console.log(databaseSnapshot)
+          return databaseSnapshot
+        } else {
+          console.log('No data available')
+        }
       })
-        setDatabaseSnapShot(databaseTemp)
-        console.log(databaseSnapshot)
-        return databaseSnapshot
-      } else {
-        console.log("No data available");
-      }
-    })
       .catch((error) => {
-        console.error(error);
-      });
+        console.error(error)
+      })
     return databaseSnapshot
   }
   // database authentication https://youtu.be/PUBnlbjZFAI
 
-  function getHash(post) {
+  function getHash (post) {
     return hash(post)
   }
   useEffect(() => {
     handleQuerryDatabase(() => {
-    });
+    })
   }, [databaseSnapshot]); // eslint-disable-line
 
   return (
@@ -119,10 +119,9 @@ function App() {
       <Footer />
     </div>
   )
-  function getPostObject() {
+  function getPostObject () {
     return <Post setAddress={setAddress} setImage={setImage} setPrice={setPrice} setLatitude={setLatitude} setLongitude={setLongitude} setDetails={setDetails} handleAction={() => handlePost()} />
   }
-
 }
 
 export default App

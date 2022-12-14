@@ -7,8 +7,9 @@ export class Header extends Component {
     sessionStorage.removeItem('Auth Token')
     window.location.reload()
   }
+
   token = sessionStorage.getItem('Auth Token')
-  render() {
+  render () {
     return (
       <div>
         <div className='topnav' id='myTopnav'>
@@ -38,7 +39,7 @@ export class Header extends Component {
 }
 
 export class Footer extends Component {
-  render() {
+  render () {
     return (
       <footer className='copyright'>
         <p>© Copyright 2022 Palau Real Estate</p>
@@ -47,4 +48,3 @@ export class Footer extends Component {
     )
   }
 }
-
