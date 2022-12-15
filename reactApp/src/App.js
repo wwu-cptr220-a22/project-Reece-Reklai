@@ -77,13 +77,11 @@ function App () {
     get(ref(database, 'posts'))
       .then((snapshot) => {
         if (snapshot.exists()) {
-          console.log(snapshot.val())
           snapshot.forEach((childSnapshot) => {
             const info = childSnapshot.val()
             databaseTemp.push(PostsList(info.price, info.address, info.image, info.details, info.lat, info.lng))
           })
           setDatabaseSnapShot(databaseTemp)
-          console.log(databaseSnapshot)
           return databaseSnapshot
         } else {
           console.log('No data available')
@@ -102,7 +100,7 @@ function App () {
   useEffect(() => {
     handleQuerryDatabase(() => {
     })
-  }, [databaseSnapshot]); // eslint-disable-line
+  }, []); // eslint-disable-line
 
   return (
     <div id='home-page'>
